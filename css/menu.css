@@ -1,0 +1,491 @@
+/* Espaçamentos */
+* {
+	margin: 0px auto;
+    padding: 0px;
+}
+
+/* Menu geral */
+.menu {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(12, 12, 31);
+    font-size: 18px;
+    position: relative; 
+    z-index: 999;
+}
+
+/* Menu esquerdo (links de navegação */
+.menu-left ul li {
+    width: 75px;
+    height: 50px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 50px;
+    text-align: center;
+    list-style-type: none;
+    float: left;
+}
+
+.menu-left ul li ul li {
+    background-color: rgba(10, 12, 23, 1);
+}
+
+.menu-left a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    display: block;
+}
+
+.default {
+    cursor: default;
+}
+
+.menu-left ul li:hover {
+    background-color: rgba(31, 31, 73, 1);
+}
+
+.menu-left ul ul {
+    display: none;
+}
+
+.menu-left ul li:hover > ul {
+    display: block;
+}
+
+
+/* Menu do centro (pesquisa)*/
+.menu-search {
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    float: left;
+}
+
+.menu-search-bar {
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+.menu-search-txt {
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    float: left;
+}
+
+.menu-search-button {
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    outline: none;
+    float: left;
+}
+
+/* Auto completar menu de pesquisa */
+
+/* Menu */
+.ui-menu {
+    width: 350px;
+    background-color: rgba(10, 12, 23, 1);
+    color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    padding: 10px 0 0 0;
+    list-style-type: none;
+    position: relative;
+    z-index: 999;
+}
+
+.ui-menu-item {
+    height: 100%;
+    padding: 5px; 
+}
+
+.ui-menu .ui-menu-item:hover, .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {
+    background-color: rgba(31, 31, 73, 1);
+}
+
+.ui-helper-hidden-accessible{
+    display:none !important;
+}
+
+/* Container */
+.container-autocomplete {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    grid-template-rows: auto;
+}
+
+/* Imagem e conteúdo */
+.search-autocomplete-image {
+    width: 100%;
+    height: 60px;
+    display: block;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+.search-autocomplete-content {
+    width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.search-autocomplete-clear {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Menu direito (registrar/entrar) */
+.menu-right {
+    width: 275px;
+    height: 50px;
+    line-height: 50px;
+    float: right;
+}
+
+.menu-right-buttons {
+    width: 215px;
+}
+
+.menu-right-signup, .menu-right-login {
+    width: 100px;
+    height: 25px;
+    border: 2px solid;
+    border-color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Menu direito após notificações*/
+.menu-right-links {
+    width: 30px;
+    float: left;
+    margin-left: 5px;
+}
+
+.menu-notifications .fa {
+    font-size: 30px;
+    line-height: 50px;
+    color: rgba(233, 124, 22, 1);
+    cursor: pointer;
+}
+
+.menu-notifications-number:after {
+    background-color: rgba(233, 124, 22, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 10px;
+    line-height: 1.0em;
+    content: attr(data-unread);
+    position: absolute;
+    top: 5px;
+}
+
+.menu-notifications .fa:hover {
+    color: rgba(255, 154, 60, 1);
+}
+
+.menu-notifications-container {
+    width: 300px;
+    max-height: 400px;
+    background-color: rgba(10, 12, 23, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-top: 50px;
+    display: none;
+    overflow: auto;
+    position: absolute;;
+    transform: translate(-85%);
+}
+
+.menu-notifications-none {
+    text-align: center;
+}
+
+.menu-notifications-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.menu-friend-avatar {
+    width: 50px;
+    height: 75px;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.menu-notifications-content {
+    width: 100%;
+    height: 75px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.menu-friend-username {
+    height: 30px;
+    font-size: 9.5px;
+    line-height: 30px;
+}
+
+.menu-friend-username a {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu-friend-confirm form {
+    display: inline-block;
+}
+
+.menu-friend-confirm {
+    text-align: center;
+}
+
+.menu-friend-buttons {
+    width: 85px;
+    background-color: rgba(233, 124, 22, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+/* Menu direito nome do perfil/avatar */
+.menu-right-profile {
+    width: 150px;
+	height: 50px;
+    color: rgba(255, 255, 255, 1);
+    margin-left: 20px;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+}
+
+.menu-right-profile:hover {
+	background-color: rgba(31, 31, 73, 1);
+}
+
+.menu-right-profile-links {
+    width: 150px;
+    background-color: rgba(10, 12, 23, 1);
+    margin-left: 55px;
+    text-align: center;
+    display: none;
+    float: left;
+    position: absolute;
+    top: 50px;
+}
+
+.menu-right-profile-links a {
+	color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    display: block;
+}
+
+.menu-right-profile-links li {
+	height: 50px;
+	list-style-type: none;
+}
+
+.menu-right-profile-links ul li:hover {
+	background-color: rgba(31, 31, 73, 1);
+}
+
+.menu-right-logout{
+	width: 150px;
+	background-color: transparent;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    line-height: 50px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+.menu-avatar {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: #e1e7f5 0 0 0 1px inset;
+    cursor: pointer;
+}
+
+.clicked {
+    background-color: rgba(31, 31, 73, 1);
+}
+
+/* Menu responsivo */
+.menu-responsive {
+    width: 100%;
+    height: 50px;
+    color: rgba(255, 255, 255, 1);
+    float: right;
+    display: none;
+}
+
+/* Botão pesquisa/página inicial/notificações/links */
+.menu-responsive-search, .menu-responsive-home, .menu-responsive-notifications, .links-activator {
+    width: 55px;
+    height: 50px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 50px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+
+.menu-responsive-home a {
+    color: rgba(255, 255, 255, 1);
+}
+
+.menu-responsive-search, .menu-responsive-notifications, .links-activator{
+    font-size: 28px!important;
+}
+
+.menu-responsive-search:hover, .menu-responsive-home:hover, .menu-responsive-notifications:hover, .links-activator:hover {
+    background-color: rgba(31, 31, 73, 1);
+}
+
+/* Links ao ser ativado */
+.menu-responsive-links {
+    width: 100%;
+    background-color: rgba(10, 12, 23, 1);
+    margin-top: 50px;
+    text-align: right;
+    display: none;
+}
+
+.menu-responsive-links a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.menu-responsive-links ul li {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px 0 0;
+}
+
+.menu-responsive-links ul li:hover {
+    background-color: rgba(31, 31, 73, 1);
+}
+
+.view {
+    display: block;
+}
+
+/* Botão de sair */
+.menu-responsive-logout {
+    width: 100%;
+    height: 50px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(10, 12, 23, 1);
+    font-size: 18px;
+    text-align: right;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.logout-clear {
+    display: block;
+}
+
+/* Tornar responsivo */
+@media (max-width: 1281px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Container */
+    .menu-right, .menu-search, .menu-left {
+        display: none;
+    }
+
+    /* Menu e botões */
+    .menu-responsive, .menu-responsive-search, .menu-responsive-home, .menu-responsive-notifications, .links-activator {
+        display: block;
+    }
+
+    /* Menu de pesquisa */
+    .menu-search{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .menu-search-bar {
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu-search-txt {
+        width: 90%;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .menu-search-button {
+        width: 10%;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 0;
+    }
+
+    /* Tornar autocomplete responsivo */
+    .ui-menu {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Tornar as notificações responsiva */
+    .menu-notifications-container {
+        max-height: 800px;
+    }
+
+    .responsive {
+        width: 100%!important;
+        transform: translate(0%);
+    }
+
+    /* Fonte das notificações */
+    .menu-friend-username {
+        font-size: 18px;
+    }
+
+    /* Botões para confirmar */
+    .menu-friend-confirm {
+        margin-top: 10px;
+    }
+
+    .menu-notifications-none {
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+/* Desativar o menu responsivo quando a tela for maior que 1281px */
+@media(min-width: 1281px) {
+    .view {
+        display: none;
+    }
+}

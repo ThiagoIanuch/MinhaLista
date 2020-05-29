@@ -1,0 +1,57 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: rgba(16, 16, 37, 1);
+}
+
+/* Container */
+.container {
+    width: 900px;
+    background-color: rgba(8, 8, 19, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    padding: 5px;
+    text-align: justify;
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+}
+
+/* Texto */
+p {
+    text-indent: 25px;
+}
+
+/* Títulos */
+h3 {
+    margin-top: 15px;
+}
+
+/* Textos, títulos e lista */
+p, h3, .container li{
+    padding: 5px 10px 0px 10px;
+}
+
+/* Mensagem final de suporte */
+.support-info {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* Tornar responsivo */
+@media (max-width: 951px) {
+    /* Containers */
+    .container-all {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .container {
+        width: 100%;
+    }
+}

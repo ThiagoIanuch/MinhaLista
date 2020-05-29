@@ -1,0 +1,186 @@
+/* Body */
+body {
+	background-color: rgba(12, 13, 37, 1);
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Video background */
+.video-bg {
+	width: 100%;
+	position: relative;
+	margin-top: -180px;
+	z-index: -1;
+}
+
+.video-header::before{
+	width: 100%;
+	height: 50vh;
+	top: -118px;
+	left: 0;
+	background: linear-gradient(180deg,rgba(20,23,28,.7),rgba(20,23,28,0));
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+.video-header::after{
+	width: 100%;
+	height: 80px;
+	bottom: 80px;
+    left: 0;
+	background: linear-gradient(180deg,rgba(30, 11, 17, 0), #0C0D25 91%);
+    content: "";
+    display: block;
+	position: relative;
+	z-index: 2;
+}
+
+/* Logo */ 
+.logo {
+	position: absolute;
+	left: 50%;
+	top: 15%;
+	transform: translate(-50%);
+	padding: 5px;
+}
+
+/* Texto se alterando */
+.text-changing{
+	color: rgba(255, 255, 255, 1);
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%);
+	font-size: 24px;
+	text-align: center;
+	text-shadow: 2px 2px rgba(233, 124, 22, 1);
+}
+
+/* Botão de registrar/entrar */
+.links {
+	width: 400px;
+	height: 50px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%);
+	text-align: center;
+	padding: 5px;
+	z-index: 4;
+}
+
+.link-signup,.link-login {
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	color: rgba(255, 255, 255, 1);
+	border: 2px solid;
+	border-color: rgba(255, 255, 255, 1);
+	font-size: 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.link-signup:hover,.link-login:hover {
+	background-color: rgba(122, 144, 151, 0.5);
+}
+
+/* Texto de bem vindo */
+.text-welcome {
+	font-size: 22px;
+	font-weight: 700;
+	color: rgba(255, 255, 255, 1);
+	text-shadow: 1px 1px rgba(133, 133, 133, 1);
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%);
+	text-align: center;
+	z-index: 3;
+}
+
+.text-welcome a {
+	color: white;
+	text-decoration: none;
+}
+
+/* Página de sugestão de anime e manga */
+.shows {
+	height: 500px;
+	background-color: rgba(12, 13, 37, 1);
+	text-align: center;
+	justify-items: center;
+}
+
+.shows-responsive {
+	display: none;
+}
+
+.avatar {
+	width: 100px;
+	height: 175px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	display: block;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(5, 100px);
+	grid-column-gap: 50px;
+	grid-row-gap: 50px;
+	justify-content: center;
+}
+
+.text-header {
+	color: rgba(255, 255, 255, 1);
+	text-shadow: 1px 1px rgba(133, 133, 133, 1);
+	font-size: 22px;
+	font-weight: 700;
+	margin-top: 50px;
+	margin-bottom: 15px;
+}
+
+/* Tornar responsivo */
+/* Quando a tela for menor que 1281px */
+@media (max-width: 1281px) {
+	* {
+		box-sizing: border-box;
+	}
+
+	/* Mensagem se alterado e texto de bem vindo */
+	.text-changing, .text-welcome {
+		width: 100%;
+	}
+
+	/* Botões de registrar/entrar */
+	.link-signup, .link-login {
+		line-height: 45px;
+	}
+
+}
+
+/* Quando a tela for menor que 981px */
+@media (max-width: 981px) {
+	/* Background */
+	.video-bg {
+		margin-top: -10px;
+	}
+
+	/* Animes/Manga que mostram */
+	.shows-not-responsive {
+		display: none;
+	}
+
+	.shows-responsive {
+		display: block;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(3, 100px);
+	}
+}

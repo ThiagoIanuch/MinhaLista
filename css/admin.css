@@ -1,0 +1,377 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: rgba(16, 16, 37, 1);
+}
+
+.logo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* View menu */
+.view-menu {
+    width: 900px;
+    background-color: rgba(8, 8, 19, 1);
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.btn-view {
+    width: 24.6%;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-view:hover {
+    background-color:  rgba(233, 124, 22, 1);
+}
+
+/* Page buttons */
+.page-buttons-top {
+    height: 20px;
+    margin-top: -25px;
+    float: right;
+}
+
+.page-button {
+    width: 100px;
+    height: 15px;
+    background-color: rgba(233, 124, 22, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-left: 10px;
+    line-height: 15px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.page-button:hover{
+    background-color: rgb(255, 165, 80);
+}
+
+/* Container all */
+.container {
+    width: 900px;
+    height: 100%;
+    background-color: rgba(8, 8, 19, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-top: 35px;
+    margin-bottom: 75px;
+    border-radius: 5px;
+}
+
+/* Container anime/manga/characters/profiles */
+.anime-container, .manga-container, .characters-container, .users-containers {
+    display: grid;
+}
+
+/* Grid cabeçario */
+.grid-header {
+    background-color: rgba(233, 124, 22, 1);
+    line-height: 25px;
+    border-radius: 5px 5px 0 0;
+    display: grid;
+    grid-template-columns: 35px 10fr 1fr;
+    grid-template-rows: 25px;
+    width: 100%;
+}
+
+/* Grid content */
+.grid-content {
+    width: 100%;
+}
+
+/* Grid content result */
+.grid-content-result {
+    grid-template-columns: 35px 10fr 1fr;
+    padding: 5px 0 5px 0;
+    display: grid;
+}
+
+.grid-content-result:nth-of-type(2n) {
+   background-color: rgb(15, 15, 29);
+}
+
+/* Content/Titulo/Avatar/Editar */
+.clear {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    width: 100%;
+    padding: 0px 0 0 10px;
+    text-align: left;
+}
+
+.edit, .block {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Grid bottom */
+.grid-bottom {
+    width: 100%;
+    height: 25px;
+    background-color: rgba(233, 124, 22, 1);
+    border-radius: 0 0 5px 5px;
+    display: grid;
+    grid-template-columns :35px 10fr 1fr;
+    text-align: center;
+}
+
+.add {
+    width: 100%;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.users {
+    width: 900px;
+    height: 25px;
+}
+
+/* Form de editar/adicionar */
+.container-edit, .container-add {
+    width: 900px;
+    background-color: rgba(8, 8, 19, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 15px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h4 {
+    text-align: left!important;
+    margin-bottom: 5px;
+}
+
+.form-input, .form-date, .form-select {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    background-color: rgba(16, 16, 37, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 15px;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.textarea {
+    resize: vertical;
+    height: 150px;
+    padding: 20px;
+}
+
+.multiple {
+    height: 100%!important;
+}
+
+.form-date {
+    width: 32%!important;
+}
+
+.day {
+    float: left;
+    margin-bottom: 5px!important;
+}
+
+.month {
+    margin-bottom: 5px!important;
+}
+
+.year {
+    float: right;
+    margin-bottom: 5px!important;
+}
+
+.btn-submit {
+    width: 100px;
+    height: 30px;
+    background-color: rgba(233, 124, 22, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 22px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.ban, .desban {
+    margin-right: 5px;
+}
+
+.margin {
+    margin-top: 10px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+/* Div para enviar o arquivo */
+.form-image {
+    text-align: left!important;
+}
+
+.dropbox {
+    width: 225px;
+    height: 225px;
+    background: rgba(16, 16, 37, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 18px 20px;
+    border-radius: 4px;
+    outline-offset: -10px;
+    outline: 2px dashed rgba(159,173,189);
+    margin-right: 20px;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    vertical-align: text-top;
+    margin-bottom: 15px;
+}
+
+.dropbox:hover {
+    background-color: rgba(31, 31, 73, 1);
+}
+
+.file-input {
+    width: 100%;
+    height: 225px;
+    margin-left: -20px;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.avatar, .banner {
+    width: 150px;
+    height: 225px;
+    border-radius: 4px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: text-top;
+    display: inline-block;
+}
+
+.banner {
+    width: calc(100% - 255px);
+    background-position: 50% 5%;
+}
+
+/* Checkbox */
+.form-checkbox {
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+/* Personagens */
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 20px;
+    margin-bottom: 15px;
+}
+
+.character-result {
+    width: 100%;
+    background-color: rgba(16, 16, 37, 1);
+    display: grid;
+    grid-template-columns: 65px 1fr;
+}
+
+.content-character {
+    width: 100%;
+    padding: 5px 10px 0 10px
+}
+
+.avatar-characters {
+    width: 65px;
+    height: 90px;
+    background-size: cover;
+    background-position: 50%;
+    border-right: 1px solid;
+}
+
+.name {
+    text-align: left;
+    margin-bottom: 5px;
+    padding: 0 10px;
+}
+
+.form-input-character {
+    width: 100%;
+    height: 25px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(8, 8, 19, 1);
+    padding: 0 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+/* Erros */
+.error-messages {
+    color: rgba(220, 20, 60, 1);
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.date {
+    margin-top: 0;
+}
+
+.double {
+    margin-top: -5px;
+}
+
+/* Tornar responsivo */
+@media (max-width: 951px) {
+    /* Container */
+    .view-menu, .container, .container-edit, .container-add, .users {
+        width: 100%;
+    }
+
+    /* Espaçamento */
+    .container-all {
+        padding: 15px;
+    }
+
+    /* Botões */
+    .btn-view {
+        width: 24.2%;
+    }
+
+    /* Aumentar o tamanho do avatar dos personagens */
+    .avatar-characters {
+        height: 100%;
+    }
+}

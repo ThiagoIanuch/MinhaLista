@@ -1,0 +1,338 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+    background-color: rgba(16, 16, 37, 1);
+}
+
+/* Background color laranja */
+.bg-color {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(233, 124, 22, 1);
+    position: fixed;
+    z-index: -1;
+}
+
+/* Menu */
+.header {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(233, 124, 22, 1);
+}
+
+.menu {
+    width: 1100px;
+    height: 100%;
+}
+
+.menu-logo { 
+    width: 350px;
+    height: 100px;
+    margin-left: -10px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+}
+
+.menu-buttons {
+    width: 450px;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 20px;
+    font-weight: 700;
+    float: right;
+}
+
+.menu-content {
+    float: right;
+}
+
+.menu-redirect, .fa-angle-down {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.list-display-none {
+    display: none;
+    float: right;
+}
+
+.list-display-block, .list-display-block a {
+    width: 125px;
+    height: 100%;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    text-align: right;
+    display: block;
+}
+
+.list-display-block a:hover{
+    text-decoration: underline;
+}
+
+/* Container da lista */
+.list-container {
+    width: 1100px;
+    background-color:rgba(8, 8, 19, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 15px 15px 15px 15px;
+    margin-top: -100px;
+    margin-bottom: 75px;
+    text-align: center;
+    border-radius: 5px;
+    
+}
+
+/* Background */
+.list-background {
+    width: 100%;
+    height: 400px;
+    background-position: 50%;
+    border-radius: 5px 5px 0 0;
+    background-position: 50% 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.shadow {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(180deg,rgba(1, 1, 44, 0) 40%,rgba(1, 1, 44, 0.6));
+}
+
+/* Menu status */
+
+.status-menu {
+    width: 100%;
+    height: 50px;
+}
+
+.status-button {
+    color: rgba(255, 255, 255, 1);
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.status-button:hover {
+    background-color: rgba(233, 124, 22, 1);
+    border-radius: 5px;
+}
+
+/* Texto de status */
+.list-status{
+    background-color: rgba(233, 124, 22, 1);
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+/* Tabela */
+.list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.list-table-data:nth-of-type(2n+1) {
+    background-color: rgba(15, 15, 29, 1);
+}
+
+.block {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(15, 15, 29, 1);
+
+}
+
+/* Colunas da tabela */
+.status {
+    width: 5px;
+}
+
+.rank {
+    width: 30px;
+}
+
+.image {
+    width: 50px;
+}
+
+.title {
+    width: 650px;
+}
+
+.title, .title a {
+    color: rgba(255, 255, 255, 1);
+    padding: 0 0 0 10px;
+    text-decoration: none;
+    text-align: left;
+
+}
+
+/* Cabeçario da tabela */
+.list-table-header{
+    height: 30px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.data-header {
+    background-color: rgba(233, 124, 22, 1);
+}
+
+/* Corpo da tabela */
+.data{
+    padding: 4px 0;
+}
+
+.watching {
+    background-color: #2db039;
+}
+
+.completed {
+    background-color: #26448f;
+}
+
+.dropped {
+    background-color: #a12f31;
+}
+
+.plantowatch {
+    background-color: #c3c3c3;
+}
+
+.avatar {
+    width: 50px;
+    height: 80px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+/* Dados totais */
+.list-total {
+    width: 100%;
+    height: 25px;
+    background-color: rgba(233, 124, 22, 1);
+    border-radius: 0 0 5px 5px;
+}
+
+/* Rodape */
+html, body {
+	height: 100%;
+}
+
+.page-wrap {
+	min-height: 100%;
+	margin-bottom: -30px; 
+}
+
+.page-wrap:after {
+	content: "";
+	display: block;
+}
+
+.footer, .page-wrap:after {
+	height: 30px; 
+}
+
+.footer {
+	background-color:rgba(8, 8, 19, 1);
+}
+
+/* Copyright */
+.copyright {
+    width: 100%;
+    color: rgba(255, 255, 255, 1);
+    line-height: 30px;
+	text-align: center;
+}
+
+/* Tornar responsivo */
+@media (max-width: 1281px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Containers */
+    .container {
+        padding: 5px;
+    }
+
+    .list-container, .menu {
+        width: 100%;
+    }
+
+    /* Botões da lista */
+    .status-menu {
+        height: 100%;
+    }
+
+    /* Barra de status */
+    .status {
+        padding: 2px;
+    }
+
+    /* Adicionar espaçamento entre o avatar e o título */
+    .avatar {
+        margin-right: 10px;
+    }
+    .title a {
+        padding: 0;
+    }
+
+    /* Espaçamento entre o texto de pontuação/tipo/progresso */
+    .score, .type {
+        padding: 0 5px 0 0;
+    }
+
+    .progress:nth-of-type(1n){
+        padding: 0 5px 0 0;
+    }
+}
+
+/* Aumentar o tamanho do footer quando a tela for menor que 681px */
+@media (max-width: 651px) {
+    .copyright {
+        padding: 5px;
+        line-height: 20px;
+    }
+    .footer, .page-wrap:after {
+        height: 50px; 
+    }
+    .margin-bottom {
+        height: 50px;
+    }
+}
+
+/* Deixar o menu/logo da lista responsivo quando a tela for menor que 851px */
+@media (max-width: 851px) {
+/* Container */
+    .list-container {
+        margin-top: -40px;
+    }
+
+    /* Logo */
+    .menu-logo {
+        float: none;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    /* Menu da lista */
+    .menu-content {
+        margin-top: 65px;
+    }
+}

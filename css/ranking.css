@@ -1,0 +1,212 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: rgba(16, 16, 37, 1);
+}
+
+/* Container */
+.ranking-container {
+    width: 1100px;
+    background-color: rgba(8, 8, 19, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-top: 75px;
+    margin-bottom: 75px;
+    border-radius: 5px;
+}
+
+/* Grid header and ranking */
+.grid-header {
+    display: grid;
+    background-color: rgba(233, 124, 22, 1);
+    border-radius: 5px 5px 0 0;
+    grid-template-columns: 100px 4fr 1fr 1fr 1fr;
+    grid-column-gap: 1px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 100px 4fr 1fr 1fr 1fr;
+    grid-column-gap: 1px;
+}
+
+.rank, .title, .score, .your-score {
+    border-right: 1px solid;
+}
+.rank, .title, .score, .your-score, .status {
+    width: 100%!important;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.rank:nth-of-type(2n+0), .title:nth-of-type(odd), .score:nth-of-type(2n+0), .your-score:nth-of-type(odd), .status:nth-of-type(2n+0) {
+    background-color: rgb(15, 15, 29);
+}
+
+/* Rank */
+.rank-number {
+    vertical-align: bottom;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 75px;
+}
+
+/* Avatar */
+.avatar {
+    width: 50px;
+    height: 75px;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Título e content */
+.title {
+    width: 500px;
+}
+
+.info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px auto;
+}
+
+.content {
+    width: 100%;
+    text-align: left;
+    padding: 0 0 0 5px;
+}
+
+.content a{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Pontuação do usúario e do anime */
+.grid3{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.star-icon {
+    width: 100%;
+    height: 75px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.score-total {
+    width: 100%;
+    height: 75px;
+    line-height: 80px;
+    text-align: left;
+}
+
+.score-total a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.your-score {
+    cursor: pointer;
+}
+
+/* Status do usúario */
+.your-status {
+    height: 25px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 25px;
+    border-radius: 5px;
+    border: 1px solid;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    top: 25px;
+}
+
+.watching, .reading {
+    border-color: #2db039;
+}
+
+.completed {
+	border-color: #26448f;
+}
+
+.dropped {
+	border-color: #a12f31;
+}
+
+.plan {
+	border-color: #c3c3c3;
+}
+
+.not-add {
+    background-color: rgb(228, 130, 39);
+    border: none;
+}
+
+/* Botões */
+.page-buttons-top {
+    height: 20px;
+    margin-top: -35px;
+    float: right;
+}
+
+.page-buttons-bottom {
+    width: 1100px;
+    height: 20px;
+    text-align: center;
+    margin-top: -60px;
+    margin-bottom: 75px;
+}
+
+.page-button {
+    width: 100px;
+    height: 20px;
+    background-color: rgba(233, 124, 22, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-left: 10px;
+    line-height: 20px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.page-button:hover{
+    background-color: rgb(255, 165, 80);
+}
+
+/* Tornar responsivo */
+@media (max-width: 1281px) {
+    /* Containers */
+    .container {
+        padding: 15px;
+    }
+
+    .ranking-container, .page-buttons-bottom {
+        width: 100%;
+    }
+
+    /* Grids */
+    .grid-header, .grid {
+        display: grid;
+        grid-template-columns: 75px 1fr 100px;
+    }
+    
+    .grid3 {
+        display: grid;
+        grid-template-columns: 40% 50%;
+    }
+
+    /* Ocultar sua pontuação e status */
+    .your-score, .status {
+        display: none;
+    }
+
+    /* Retirar a borda do lado direito */
+    .score {
+        border: none;
+    }
+}

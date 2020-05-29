@@ -1,0 +1,93 @@
+/* Body */
+body {
+	background-color: rgba(16, 16, 37, 1);
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Formulario de registro - container */
+.form-container-all {
+	width: 600px;
+	height: 100%;
+	background-color: rgba(8, 8, 19, 1);
+	color: rgba(255, 255, 255, 1);
+	margin-top: 55px;
+	margin-bottom: 55px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+/* Formulario de registro */
+.form-container {
+	width: 500px;
+	height: 100%;
+	padding: 5px;
+}
+
+.logo {
+	margin-top: 25px;
+	text-align: center;
+}
+
+.form-input {
+	width: 460px;
+	height: 50px;
+	background-color: rgba(16, 16, 37, 1);
+	color: rgba(255, 255, 255, 1);
+	font-size: 16px;
+	margin-bottom: 5px;
+	margin-top: 25px;
+	padding: 0 20px;
+	border: none;
+	border-radius: 5px;
+}
+
+.form-checkbox {
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+.form-submit {
+	text-align: center;
+}
+
+.form-submit-button {
+	width: 150px;
+	height: 50px;
+	background-color: rgb(233, 124, 22, 1);
+	color: rgba(255, 255, 255, 1);
+	margin-top: 25px;
+	margin-bottom: 35px;
+	font-size: 24px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	outline: none;
+}
+
+.form-error {
+	color: rgba(220, 20, 60, 1);
+}
+
+.support-error {
+	color: rgba(220, 20, 60, 1);
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.support-error:hover {
+	text-decoration: underline;
+}
+
+/* Tornar responsivo */
+@media (max-width: 1201px) {
+	/* Container */
+	.container {
+		width: 100%;
+		padding: 15px;
+	}
+
+	/* Formulário */
+	.form-container-all, .form-container, .form-input {
+		width: 100%;
+	}
+}

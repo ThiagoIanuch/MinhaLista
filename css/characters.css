@@ -1,0 +1,125 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: rgba(16, 16, 37, 1);
+}
+
+/* Container */
+.character-container {
+    width: 1100px;
+    background-color: rgba(8, 8, 19, 1);
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+/* Grid */
+.character-grid {
+    display: grid;
+    grid-template-columns: 225px 1fr;
+    padding: 20px;
+}
+
+/* Avatar/favorito */
+.character-avatar-favorite {
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Avatar */
+.character-avatar {
+    width: 225px;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: block;
+}
+
+/* Adicionar/remover personagem dos favoritos */
+.favorite-add {
+    background-color: rgba(8, 8, 19, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.remove {
+    color: red !important;
+}
+
+/* Mensagem se o usúario não estiver logado */
+.not-login {
+    margin-top: 10px;
+}
+
+.not-login a {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Nome e informações do personagem */
+.character-content {
+    width: 100%;
+}
+
+.character-name {
+    color: rgba(255, 255, 255, 1);
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0 0 0 20px;
+}
+
+.edit {
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.edit:hover {
+    text-decoration: underline;
+}
+
+.character-info {
+    color: rgba(255, 255, 255, 1);
+    padding: 10px 0 0 20px;
+}
+
+/* Tornar o site responsivo */
+@media (max-width: 1281px) {
+    /* Container */
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Container personagem */
+    .character-container {
+        width: 100%;
+    }
+}
+
+/* Alterar visualização da página quando a tela for menor que 981px */
+@media (max-width: 981px) {
+    /* Grid */
+    .character-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    /* Nome do personagem */
+    .character-name {
+        text-align: center;
+    }
+}
+
+/* Resolver erro de visualização quando a tela ovltar a ser maior que 981px */
+@media (min-width: 981px) {
+    .character-avatar-favorite {
+        width: 100%;
+    }
+}

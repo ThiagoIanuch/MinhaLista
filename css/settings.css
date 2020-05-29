@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(16, 16, 37, 1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 900px;
+    height: 100%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+/* Cabeçario/configurações */
+.settings-header, .settings-content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 8, 19, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.settings-header {
+    text-align: center;
+}
+
+.settings-content {
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/* Botões do cabeçário */
+.buttons {
+    width: 100%;
+}
+
+.header-edit {
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    background-color: rgba(233, 124, 22, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.header-edit:hover {
+    background-color: rgba(255, 154, 60, 1);
+}
+
+/* Configurações dos formulários das configurações */
+.section-profile {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.section-profile h4 {
+    text-align: left;
+}
+
+.section {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.label {
+    margin-bottom: 5px;
+}
+
+/* Campos das configurações  */
+.textarea-input, .select-input, .text-input, .birthday-input {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(16, 16, 37, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.textarea-input {
+    min-height: 50px;
+    padding: 15px 0 0 20px;
+    resize: vertical;
+}
+
+.select-input {
+    padding: 15px!important;
+}
+
+.birthday-input {
+    width: 32%;
+}
+
+.year {
+    float: right;
+}
+
+.day {
+    float: left;
+}
+
+.submit-input {
+    width: 150px;
+    height: 40px;
+    background-color: rgba(233, 124, 22, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 22px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Div para enviar o arquivo */
+.dropbox {
+    width: 225px;
+    height: 225px;
+    background: rgba(16, 16, 37, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 18px 20px;
+    border-radius: 4px;
+    outline-offset: -10px;
+    outline: 2px dashed rgba(159,173,189);
+    margin-right: 20px;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    vertical-align: text-top;
+}
+
+.dropbox:hover {
+    background-color: rgba(31, 31, 73, 1);
+}
+
+.file-input {
+    width: 100%;
+    height: 225px;
+    margin-left: -20px;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+}
+
+/* Checkbox para deletar avatar/banner */
+.form-checkbox {
+    margin-top: 5px;
+}
+
+/* Exibir avatar/banner */
+.avatar, .banner {
+    width: 150px;
+    height: 225px;
+    border-radius: 4px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: text-top;
+    display: inline-block;
+}
+
+.banner {
+    width: calc(100% - 255px);
+    background-position: 50% 5%;
+}
+
+/* Exibir mensagem de erro */
+.error-image {
+    color: rgba(220, 20, 60, 1);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.error {
+    color: rgba(220, 20, 60, 1);
+    text-align: left;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.error:nth-of-type(3) {
+    position: absolute;
+}
+
+/* Tornar responsivo */
+@media (max-width: 951px) {
+    /* Container */
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Botões */
+    .header-edit {
+        width: 135px;
+    }
+}

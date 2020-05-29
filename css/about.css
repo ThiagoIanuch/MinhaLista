@@ -1,0 +1,83 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: rgba(16, 16, 37, 1);
+}
+
+/* Container */
+.container {
+    width: 900px;
+    background-color: rgba(8, 8, 19, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    text-align: center;
+}
+
+/* Background */
+.bg-header {
+    width: 900px;
+    height: 350px;
+    background-size: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Logo */
+.logo {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Textos */
+h2 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    margin-top: 35px;
+}
+
+p {
+    padding: 5px 10px 0px 10px;
+    text-indent: 25px;
+    text-align: justify;
+}
+
+/* Botão */
+.button {
+    width: 215px;
+    height: 50px;
+    background-color: rgba(233, 124, 22, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    line-height: 50px;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover {
+    text-decoration: underline;
+}
+
+/* Tornar responsivo */
+@media (max-width: 951px) {
+    /* Containers */
+    .container-all {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    /* Background */
+    .bg-header {
+        width: 100%;
+    }
+}

@@ -1,0 +1,646 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: rgba(16, 16, 37, 1);
+}
+
+/* Banner */
+.banner {
+	height: 330px;
+	background-color: rgba(8, 8, 19, 1);
+	background-position: 50% 5%;
+    background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: -2;
+}
+
+.banner-shadow {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg,rgba(1, 1, 44, 0) 40%,rgba(1, 1, 44, 0.6));
+    position: absolute;
+	z-index: -1;
+}
+
+/* Container geral */
+.container {
+	width: 1100px;
+	color: rgba(255, 255, 255, 1);
+	margin-bottom: 75px;
+	border-radius: 0 0 5px 5px;
+	display: flex;
+}
+
+.container h3 {
+	padding: 5px;
+}
+
+/* Container esquerdo */
+.container-left {
+	width: 235px;
+	padding: 10px;
+}
+
+/* Avatar */
+.avatar {
+	width: 225px;
+	background-color: rgba(8, 8, 19, 1);
+	border-radius: 5px;
+	margin-top: -200px;
+	padding: 10px;
+}
+
+.avatar-profile{
+	width: 225px;
+	height: 350px;
+	display: block;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+/* Tipo do usúario */
+.usertype {
+	border-radius: 0 0 5px 5px;
+	padding: 5px;
+	text-align: center;
+}
+
+.admin {
+	background-color: red;
+}
+
+.member {
+	background-color: grey;
+}
+
+/* Amigos */
+.friends {
+	width: 100%;
+	background-color: rgba(8, 8, 19, 1);
+	margin-top: 15px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.friends-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	padding: 5px;
+}
+
+.all-friends-grid {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	padding: 5px;
+}
+
+.friends-avatar {
+	width: 100%;
+	height: 65px;
+	background-size: cover;
+	background-position: 50%;
+}
+
+.all-friends-avatar {
+	width: 100%;
+	height: 150px;
+	background-size: cover;
+	background-position: 50%;
+}
+
+.friends h4 {
+	font-weight: 400;
+	padding: 0 0 0 5px;
+}
+
+.friends h3{
+	display: inline-block;
+}
+
+.friends-total {
+	color: rgba(255, 255, 255, 1);
+	padding: 5px 5px 0 5px;
+	text-decoration: none;
+	float: right;
+}
+
+.friends-total:hover {
+	text-decoration: underline;
+}
+
+.friend-request {
+	width: 100%;
+	height: 25px;
+	background-color: rgba(31, 31, 73, 1);
+	color: rgba(255, 255, 255, 1);
+	margin-top: 5px;
+	border: none;
+	border-radius: 5px;
+	padding: 0 0 0 5px;
+	line-height: 25px;
+	text-align: center;
+	outline: none;
+	cursor: pointer;
+}
+
+.waiting {
+	cursor: initial;
+}
+
+.waiting:hover {
+	background-color: rgba(16, 16, 37, 1);
+}
+
+/* Sobre o úsuario */
+.aboutme {
+	width: 100%;
+	background-color: rgba(8, 8, 19, 1);
+	margin-top: 15px;
+	border-radius: 5px;
+	padding: 5px;	
+}
+
+.aboutme h4 {
+	font-weight: 400;
+	padding: 0 0 0 5px;
+}
+
+.aboutme-content {
+	padding: 0 5px;
+	word-wrap: break-word
+}
+
+/* Informações do perfil */
+.user-info {
+	width: 100%;
+	background-color: rgba(8, 8, 19, 1);
+	margin-top: 15px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.user-info ul li {
+	height: 20px;
+	line-height: 20px;
+	padding: 3px;
+	list-style-type: none;
+}
+
+.info-bg {
+	background-color: rgba(16, 16, 37, 1);
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.offline {
+	color: #a12f31;
+	font-weight: 700;
+}
+
+.online {
+	font-weight: 700;
+	color: #2db039;
+}
+
+/* Botões da lista */
+.buttons-list {
+	margin-bottom: 5px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.buttons-list a {
+	width: 110px;
+	height: 35px;
+	background-color: rgb(31, 31, 73);
+	color: rgba(255, 255, 255, 1);
+	margin-top: 15px;
+	border-radius: 3px;
+	line-height: 35px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+/* Container direito */
+.container-right {
+	width: 865px;
+	padding: 10px;
+	vertical-align: top;
+}
+
+/* Nome do perfil */
+.username{
+	margin-top: -50px;
+	text-shadow: 5px 5px 5px black;	
+}
+
+.username-clear {
+    display: inline-block;
+}
+
+.edit {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.edit:hover {
+    text-decoration: underline;
+}
+
+/* Estatísticas do perfil*/
+.stats h4 {
+	width: 100%;
+	margin-bottom: 5px;
+	font-weight: 400;
+}
+
+.stats {
+	width: 100%;
+	background-color: rgba(8, 8, 19, 1);
+	border-radius: 5px;
+	margin-top: 15px;
+	padding: 5px;
+}
+
+.stats-grid {
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;
+	padding: 5px;
+}
+
+.stats-anime, .stats-manga {
+	width: 400px;
+}
+
+/* Estatísticas do perfil em gráfico */
+.stats-graph {
+	width: 100%;
+	height: 20px;
+	background-color: rgb(216, 216, 216);
+	font-size: 0;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	display: block;
+	overflow: hidden;
+}
+
+.stats-graph-watching {
+	background-color: #2db039;
+	display: inline-block;
+}
+
+.stats-graph-completed {
+	background-color: #26448f;
+	display: inline-block;
+}
+
+.stats-graph-dropped {
+	background-color: #a12f31;
+	display: inline-block;
+}
+
+.stats-graph-plan {
+	display: inline-block;
+	background-color: #c3c3c3;
+}
+
+/* Estatísticas do perfil em números */
+.stats-status {
+	width: 200px;
+	float: left;
+}
+
+.stats-status li, .stats-status a{
+	color: rgba(255, 255, 255, 1);
+	margin-top: 5px;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+.circle-status::before{
+	height: 12px;
+	width: 12px;
+	border-radius: 5px;
+	content: '';
+	display: inline-block;
+}
+
+.watching::before {
+	background-color: #2db039;
+}
+
+.completed::before {
+	background-color: #26448f;
+}
+
+.dropped::before {
+	background-color: #a12f31;
+}
+
+.plan::before {
+	background-color: #c3c3c3;
+}
+
+.stats-status-total {
+	width: 150px;
+	float: right;
+}
+
+.stats-status-total li{
+	color: rgba(255, 255, 255, 1);
+	margin-top: 5px;
+	list-style-type: none;
+}
+
+/* Favoritos */
+.user-favorites {
+	width: 100%;
+	background-color: rgba(8, 8, 19, 1);
+	margin-top: 15px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.user-favorites h4 {
+	font-weight: 400;
+}
+
+.anime-favorites, .manga-favorites {
+	padding: 5px;
+}
+
+.favorites-avatar {
+	width: 100%;
+	height: 125px;
+	display: block;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+.favorites-grid {
+	display: grid;
+	grid-template-columns:  repeat(10, 1fr);
+	grid-column-gap: 15px;
+}
+
+/* Comentários */
+.comments{
+	width: 100%;
+	background-color: rgba(8, 8, 19, 1);
+	margin-top: 15px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.h3-comments {
+	float: left;
+}
+
+.all-comments {
+	float: right;
+	padding: 6px;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 1);
+}
+
+.comments-container-all, .friends-container-all {
+	margin-top: 75px;
+}
+
+.all {
+	margin-top: 0!important;
+}
+
+.all-comments:hover {
+	text-decoration: underline;
+}
+
+.comments-form {
+	padding: 5px;
+}
+
+.comment-input {
+	width: 100%;
+	min-height: 65px;
+	background-color: rgba(16, 16, 37, 1);
+	color: rgba(255, 255, 255, 1);
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	box-sizing: border-box;
+	resize: vertical;
+}
+
+.comment-submit {
+	width: 135px;
+	height: 20px;
+	background-color: rgba(233, 124, 22, 1);
+	color: rgba(255, 255, 255, 1);
+	margin-top: 5px;
+	text-align: left;
+	padding: 0 0 0 10px;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+}
+
+.error-comment {
+	color: rgba(220, 20, 60, 1);
+	margin-top: 5px;
+}
+
+.comment-not-session, .not-comment {
+	padding: 5px;
+}
+
+.comment-not-session {
+	margin-top: 35px;
+}
+
+.comment-not-session a {
+	color: rgba(255, 255, 255, 1);
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.comments-grid {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-row-gap: 15px;
+	padding: 5px;
+}
+
+.comment-grid {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 70px 1fr;
+	background-color: rgba(16, 16, 37, 1);
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.user-comment-avatar {
+	width: 65px;
+	height: 110px;
+	background-position: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: block;
+}
+
+.comment-content {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.comment-username {
+	height: 25px;
+	font-weight: 700;
+	float: left;
+}
+
+.comment-username a {
+	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
+}
+
+.comment-date {
+	float: right;
+}
+
+.comment-text {
+	width: 100%;
+	margin-left: 3px;
+	margin-bottom: 20px;
+	display: inline-block;
+	word-break: break-word;
+}
+
+.comment-delete {
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+}
+
+.comment-delete-btn {
+	background-color: rgba(16, 16, 37, 1);
+	color: rgba(255, 255, 255, 1);
+	font-size: 16px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+/* Botões */
+.page-buttons-top {
+    height: 20px;
+    margin-top: -35px;
+    float: right;
+}
+
+.page-buttons-bottom {
+    width: 1100px;
+    height: 20px;
+    text-align: center;
+    margin-top: -60px;
+    margin-bottom: 75px;
+}
+
+.page-button {
+    width: 100px;
+    height: 20px;
+    background-color: rgba(233, 124, 22, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-left: 10px;
+    line-height: 20px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.page-button:hover{
+    background-color: rgb(255, 165, 80);
+}
+
+/* Tornar o site responsivo */
+@media (max-width: 1281px) {
+	/* Containers */
+	.container {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto;
+		grid-row-gap: 50px;
+		padding: 5px;
+	}
+
+	.container-left, .container-right {
+		width: 100%;
+		padding: 10px;
+	}
+
+	.comments-container-all, .friends-container-all {
+		padding: 15px;
+	}
+
+	/* Avatar */
+	.avatar {
+		box-sizing: content-box!important;
+	}
+
+	/* Botões da lista */
+	.buttons-list {
+		width: 100%;
+		display: inline-block;
+	}
+
+	/* Estatísticas */
+	.stats-grid {
+		display: grid;
+		grid-template-columns: none;
+		grid-template-rows: auto;
+	}
+
+	.stats-anime, .stats-manga {
+		width: 100%;
+	}
+
+	/* Amigos */
+	.friends-grid {
+		display: grid;
+		grid-template-columns: repeat(5, auto);
+	}
+	.friends-avatar {
+		height: 125px;
+	}
+
+	/* Favoritos */
+	.favorites-grid {
+		display: grid;
+		grid-template-columns: repeat(5, auto);
+		grid-template-rows: auto;
+		grid-row-gap: 15px;
+	}
+}

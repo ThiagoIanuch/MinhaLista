@@ -1,0 +1,60 @@
+/* Rodape */
+html, body {
+	height: 100%;
+}
+
+.page-wrap {
+	min-height: 100%;
+	margin-bottom: -80px; 
+}
+
+.page-wrap:after {
+	content: "";
+	display: block;
+}
+
+.footer, .page-wrap:after {
+	height: 80px; 
+}
+
+.footer {
+	background-color:rgba(8, 8, 19, 1);
+}
+
+/* Links */
+.footer-links {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	line-height: 45px;
+}
+
+.link {
+	color: rgba(255, 255, 255, 1);
+	margin-right: 15px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+/* Copyright */
+.copyright {
+	width: 100%;
+	color: rgba(255, 255, 255, 1);
+	text-align: center;
+}
+
+/* Tornar responsivo */
+@media (max-width: 651px) {
+	.copyright {
+		padding: 5px;
+	}
+
+	.footer-links {
+		height: 35px;
+		line-height: 35px;
+	}
+}

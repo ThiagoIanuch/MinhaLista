@@ -1,0 +1,57 @@
+body {
+	font-family: 'Roboto', sans-serif;
+    background-color: rgba(16, 16, 37, 1);
+}
+
+.container {
+    width: 100%;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
+/* Imagem */
+.error-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -999;
+    width: 300px;
+    height: 400px;
+}
+
+.banned {
+    width: 400px;
+    height: 475px;
+}
+
+/* Erro */
+.error {
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 85px;
+    text-shadow: 2px 2px black;
+}
+
+.error a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.error a:hover {
+    color: rgb(216, 216, 216);
+}
+
+/* Mensagem */
+.message {
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    text-shadow: 2px 2px black;
+}
