@@ -5,7 +5,7 @@
         $animeID = $_GET['animeid'];
     }
 
-    /*  Dados gerais */
+    //  Dados gerais
     $sql = "SELECT * FROM anime WHERE animeID=?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -39,7 +39,7 @@
         }
     }
 
-    /* Usúario já adicionou na lista ou não / status em que o anime se encontra pro usúario */
+    // Usúario já adicionou na lista ou não / status em que o anime se encontra pro usúario
     if (isset($_SESSION['userID'])) {
         $userID = $_SESSION['userID'];
         $sql = "SELECT userID, userStatus, userScore, userEpisodes FROM anime_users WHERE animeID=? AND userID=?";   
@@ -114,7 +114,7 @@
         }
     }
     
-    /* Saber se úsuario adicionou os favoritos */
+    // Saber se úsuario adicionou os favoritos
     if(isset($_SESSION['userID'])) {
         $sql = "SELECT ID FROM anime_favorites WHERE animeID=? AND userID=?";
         $stmt = mysqli_stmt_init($conn);
@@ -134,7 +134,7 @@
         }
     }
 
-    /* Pontuação e número de membros do anime */
+    // Pontuação e número de membros do anime
     $sql = "SELECT userScore, AVG(userScore), userID, count(*) animeUsers, userID FROM anime_users WHERE animeID=?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {

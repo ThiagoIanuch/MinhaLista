@@ -81,35 +81,35 @@
                 <div class="container-edit">
                     <img src="img/logo1.png">
                     <?php
-                    /* Anime */
+                    // Anime
                     if($_GET['config'] == 'edit' && isset($_GET['animeid'])) {
-                        /* Verificar a data que o anime começou */
+                        // Verificar a data que o anime começou
                         $yearStart = substr($animeStart, -10, 4);
                         $monthStart = substr($animeStart, -5, 2);
                         $dayStart = substr($animeStart, -2, 2);
 
-                        /* Verificar a data que o anime terminou */
+                        // Verificar a data que o anime terminou
                         $yearEnd = substr($animeEnd, -10, 4);
                         $monthEnd = substr($animeEnd, -5, 2);
                         $dayEnd = substr($animeEnd, -2, 2);
 
-                        /* Verificar qual o tipo selecionado */
+                        // Verificar qual o tipo selecionado
                         $typeTV = $animeType == "TV" ? "selected" : "";
                         $typeMovie = $animeType == "Filme" ? "selected" : "";
                         $typeOVA = $animeType == "OVA" ? "selected" : "";
                         $typeONA = $animeType == "ONA" ? "selected" : "";
 
-                        /* Verificar qual o status selecionado */
+                        // Verificar qual o status selecionado
                         $statusFinished = $animeStatus == "Finalizado" ? "selected" : "";
                         $statusAiring = $animeStatus == "Em exibição" ? "selected" : "";
                         $statusNotAired = $animeStatus == "Ainda não foi exibido" ? "selected" : "";
 
-                        /* Verificar qual a fonte selecionada */
+                        // Verificar qual a fonte selecionada
                         $sourceManga = $animeSource == "Manga" ? "selected" : "";
                         $sourceNovel = $animeSource == "Novel" ? "selected" : "";
                         $sourceOriginal = $animeSource == "Original" ? "selected" : "";
 
-                        /* Opções para selecionar os gêneros e os gêneros já selecionados*/
+                        // Opções para selecionar os gêneros e os gêneros já selecionados
                         $animeGenresOptions = array("Ação", "Aventura", "Carros", "Comédia", "Dementia", "Dêmonios", "Drama", "Ecchi", "Fantasia", "Jogo", "Harém", "Hentai", "Historical", "Horror", "Josei", "Crianças", "Magia", "Artes Marciais", "Mecha", "Militar", "Música", "Mistério", "Paródia", "Policial", "Psicológico", "Romance", "Samurai", "Escolar", "Ficção Científica", "Seinen", "Shoujo", "Shoujo Ai", "Shounen", "Shounen Ai", "Fátia de Vida", "Espaço", "Esportes", "Super Poder", "Sobrenatural", "Thriller", "Vampiro", "Yaoi", "Yuri");
                         $animeGenres = explode(", ", $animeGenres);
 
@@ -292,7 +292,7 @@
                             
                             <h4>Personagens</h4>
                             <div class="characters-grid">';
-                                /* Se não existir 6 personagens no banco de dados do anime */
+                                // Se não existir 6 personagens no banco de dados do anime
                                 for($i = 0; $i <= 5; $i++) {
                                     if(empty($characterID[$i])) {
                                         $nameValue = $i+1;
@@ -304,7 +304,7 @@
                                 }
                             
                                 for($i = 0; $i < count($characterID), $i < count($characterName), $i < count($characterAvatar), $i < count($characterRole); $i++) {  
-                                    /* Marcar como selecionado se for principal ou secundário */
+                                    // Marcar como selecionado se for principal ou secundário
                                     $characterRoleMain[$i] = $characterRole[$i] == "Principal" ? "selected" : "";
                                     $characterRoleSecondary[$i] = $characterRole[$i] == "Secundário" ? "selected" : "";
 
@@ -328,28 +328,28 @@
                         </form>';
                     }
 
-                    /* Manga */
+                    // Manga
                     if($_GET['config'] == 'edit' && isset($_GET['mangaid'])) {
-                        /* Verificar o ano que o manga começou */
+                        // Verificar o ano que o manga começou
                         $yearStart = substr($mangaStart, -10, 4);
                         $monthStart = substr($mangaStart, -5, 2);
                         $dayStart = substr($mangaStart, -2, 2);
 
-                        /* Verificar o ano que o manga terminou */
+                        // Verificar o ano que o manga terminou
                         $yearEnd = substr($mangaEnd, -10, 4);
                         $monthEnd = substr($mangaEnd, -5, 2);
                         $dayEnd = substr($mangaEnd, -2, 2);
 
-                        /* Verificar qual o tipo selecionado */
+                        // Verificar qual o tipo selecionado
                         $typeManga = $mangaType == "Manga" ? "selected" : "";
                         $typeNovel = $mangaType == "Novel" ? "selected" : "";
 
-                        /* Verificar qual o status selecionado */
+                        // Verificar qual o status selecionado
                         $statusFinished = $mangaStatus == "Finalizado" ? "selected" : "";
                         $statusPublished = $mangaStatus == "Em publicação" ? "selected" : "";
                         $statusNotPublished = $mangaStatus == "Ainda não foi publicado" ? "selected" : "";
 
-                        /* Opções para selecionar os gêneros e os gêneros já selecionados*/
+                        // Opções para selecionar os gêneros e os gêneros já selecionados
                         $mangaGenresOptions = array("Ação", "Aventura", "Carros", "Comédia", "Dementia", "Dêmonios", "Doujinshi", "Drama", "Ecchi", "Fantasia", "Jogo", "Gênero Bender", "Harém", "Hentai", "Historical", "Horror", "Josei", "Crianças", "Magia", "Artes Marciais", "Mecha", "Militar", "Música", "Mistério", "Paródia", "Policial", "Psicológico", "Romance", "Samurai", "Escolar", "Ficção Científica", "Seinen", "Shoujo", "Shoujo Ai", "Shounen", "Shounen Ai", "Fátia de Vida", "Espaço", "Esportes", "Super Poder", "Sobrenatural", "Thriller", "Vampiro", "Yaoi", "Yuri");
                         $mangaGenres = explode(", ", $mangaGenres);
 
@@ -525,7 +525,7 @@
                             
                             <h4>Personagens</h4>
                             <div class="characters-grid">';
-                                /* Se não existir 6 personagens no banco de dados do anime */
+                                // Se não existir 6 personagens no banco de dados do anime
                                 for($i = 0; $i <= 5; $i++) {
                                     if(empty($characterID[$i])) {
                                         $nameValue = $i+1;
@@ -537,7 +537,7 @@
                                 }
                             
                                 for($i = 0; $i < count($characterID), $i < count($characterName), $i < count($characterAvatar), $i < count($characterRole); $i++) {  
-                                    /* Marcar como selecionado se for principal ou secundário */
+                                    // Marcar como selecionado se for principal ou secundário
                                     $characterRoleMain[$i] = $characterRole[$i] == "Principal" ? "selected" : "";
                                     $characterRoleSecondary[$i] = $characterRole[$i] == "Secundário" ? "selected" : "";
 
@@ -561,7 +561,7 @@
                         </form>';
                     }
 
-                    /* Personagens */
+                    // Personagens
                     if($_GET['config'] == 'edit' && isset($_GET['characterid'])) {
                         echo '
                         <form action="includes/admin-edit.inc.php?config=edit&characterid='.$characterID.'" method="post" enctype="multipart/form-data" id="character-edit">   
@@ -590,7 +590,7 @@
                         </form>';
                     }
 
-                    /* Usúarios */
+                    // Usúarios
                     if($_GET['config'] == 'edit' && isset($_GET['userid'])) {
                         $yearBirthday = substr($userBirthday, -10, 4);
                         $monthBirthday = substr($userBirthday, -5, 2);

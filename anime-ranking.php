@@ -51,22 +51,22 @@
                             
                             for($i = 0, $ii=0;$i < count($animeID), $i < count($animeTitle), $i < count($animeAvatar), $i < count($animeType), $i < count($animeEpisodes), $i < count($animeStart), $i < count ($animeEnd), $i < count($animeUsers), $i < count($animeScore); $i++, $ii++) {
                             
-                            /* Dia início */$dayStart[$i] = substr($animeStart[$i], -2, 2);
-                            /* Mes início */ $monthStart[$i] = substr($animeStart[$i], -5, 2);
-                            /* Ano início */ $yearStart[$i] = substr($animeStart[$i], -10, 4);
+                            $dayStart[$i] = substr($animeStart[$i], -2, 2); // Dia início
+                            $monthStart[$i] = substr($animeStart[$i], -5, 2);  // Mes início
+                            $yearStart[$i] = substr($animeStart[$i], -10, 4);  // Ano início
 
-                            /* Dia final */$dayEnd[$i] = substr($animeEnd[$i], -2, 2);
-                            /* Mês final */ $monthEnd[$i] = substr($animeEnd[$i], -5, 2);
-                            /* Ano final */ $yearEnd[$i] = substr($animeEnd[$i], -10, 4);
+                            $dayEnd[$i] = substr($animeEnd[$i], -2, 2);  // Dia final 
+                            $monthEnd[$i] = substr($animeEnd[$i], -5, 2); // Mês final
+                            $yearEnd[$i] = substr($animeEnd[$i], -10, 4); // Ano final 
                                             
-                            /* Data de início */
+                            // Data de início
                             if($animeStart[$i] != null) {
-                                /* Exibir o mês e o ano */
+                                // Exibir o mês e o ano
                                 if($yearStart[$i] > 0 && $monthStart[$i] > 0 && $dayStart[$i] >= 0) {
                                     $animeStart[$i] = $yearStart[$i].'-'.$monthStart[$i].'-'.'01';
                                     $animeStart[$i] = strftime('%b, %Y',strtotime($animeStart[$i])).' até ';
                                 }
-                                /* Se o mês for nulo, exibir apenas o ano */
+                                // Se o mês for nulo, exibir apenas o ano
                                 else if($yearStart[$i] > 0 && $monthStart[$i] <= 0 && $dayStart[$i] <= 0) {
                                     $animeStart[$i] = $yearStart[$i].'-'.'01'.'-'.'01';
                                     $animeStart[$i] = strftime('%Y',strtotime($animeStart[$i])).' até ';
@@ -81,16 +81,15 @@
                             else {
                                 $animeStart[$i] = '? até ';
                             }
-                            /*  */
-
-                            /* Data de término */
+                            
+                            // Data de término 
                             if($animeEnd[$i] != null) {
-                                /* Exibir o mês e o ano */
+                                // Exibir o mês e o ano
                                 if($yearEnd[$i] > 0 && $monthEnd[$i] > 0 && $dayEnd[$i] >= 0) {
                                     $animeEnd[$i] = $yearEnd[$i].'-'.$monthEnd[$i].'-'.'01';
                                     $animeEnd[$i] = strftime('%b, %Y',strtotime($animeEnd[$i]));
                                 }
-                                /* Se o mês for nulo, exibir apenas o ano */
+                                // Se o mês for nulo, exibir apenas o ano
                                 else if($yearEnd[$i] > 0 && $monthEnd[$i] <= 0 && $dayEnd[$i] <= 0) {
                                     $animeEnd[$i] = $yearEnd[$i].'-'.'01'.'-'.'01';
                                     $animeEnd[$i] = strftime('%Y',strtotime($animeEnd[$i]));
@@ -107,7 +106,6 @@
                             }
 
                             $animeAired[$i] = ucfirst($animeStart[$i]).ucfirst($animeEnd[$i]);
-                            /*  */
 
                             if(empty($animeEpisodes[$i])) {
                                 $animeEpisodes[$i] = '?';

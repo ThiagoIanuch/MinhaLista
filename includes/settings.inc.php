@@ -6,7 +6,7 @@
     $userID = $_SESSION["userID"];
     $allowed = array('jpg', 'jpeg', 'png', 'gif');
 
-    /* Configurações gerais */
+    // Configurações gerais
     if(isset($_POST['settings-submit'])) {
         $sql = "UPDATE users SET userAbout=?, userGender=?, userBirthday=?, userLocalization=? WHERE userID=?";
         $stmt = mysqli_stmt_init($conn);
@@ -48,7 +48,7 @@
         }
     }
 
-    /* Atualizar avatar do perfil */
+    // Atualizar avatar do perfil
     if(isset($_FILES['profile-avatar']['name'])) {
         $userAvatarName = $_FILES['profile-avatar']['name'];
         $userAvatarTmpName = $_FILES['profile-avatar']['tmp_name'];
@@ -115,7 +115,7 @@
         }
     } 
 
-    /* Atualizar banner do perfil */
+    // Atualizar banner do perfil
     if(isset($_FILES['profile-banner']['name'])) {
         $userBannerName = $_FILES['profile-banner']['name'];
         $userBannerTmpName = $_FILES['profile-banner']['tmp_name'];
@@ -182,7 +182,7 @@
         }
     } 
 
-    /* Atualizar o banner da lista */
+    // Atualizar o banner da lista
     if(isset($_FILES['list-banner']['name'])) {
         $listBannerName = $_FILES['list-banner']['name'];
         $listBannerTmpName = $_FILES['list-banner']['tmp_name'];

@@ -2,7 +2,7 @@
     include "db.inc.php";
 
     if(isset($_GET['userid'])) {
-        /* Mostrar os últimos 5 comentários */
+        // Mostrar os últimos 5 comentários
         $userIDProfile = $_GET['userid'];
         $sql = "SELECT uc.commentID, uc.userComment, uc.userID, uc.commentDate, u.userName, u.userAvatar FROM users_comments uc JOIN users u ON uc.userID=u.userID WHERE userIDProfile=? ORDER BY commentDate DESC LIMIT 5";
         $stmt = mysqli_stmt_init($conn);
@@ -30,7 +30,7 @@
             }
         }
 
-        /* Contar total de comentários */
+        // Contar total de comentários
         $sql = "SELECT commentID FROM users_comments WHERE userIDProfile=?";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
@@ -44,7 +44,7 @@
         }
     }
     
-    /* Adicionar comentário */
+    // Adicionar comentário
     if(isset($_POST['comment-submit'])) {
         session_start();
         $userID = $_SESSION['userID'];
@@ -67,7 +67,7 @@
         }
     }
 
-    /* Excluir comentário */
+    // Excluir comentário
     if(isset($_POST['comment-delete'])) {
         $profileURL = $_SERVER['HTTP_REFERER'];
         $commentID = $_POST['commentID'];

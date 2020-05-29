@@ -1,7 +1,7 @@
 <?php
     include "db.inc.php";
 
-    /* Anime */
+    // Anime
     if(isset($_GET['page'])) {
         $page = $_GET['page'];
     }
@@ -28,15 +28,14 @@
                 }
             }
         }
-        /* Atualizar depois */
+        // Atualizar depois
         $total_pages_sql = "SELECT COUNT(animeID) FROM anime";
         $result = mysqli_query($conn,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $anime_per_page);
-        /*  */
     }
 
-    /* Manga */
+    // Manga
     if(isset($page) && $page > 0 && $_GET['view'] == 'manga') {
         $manga_per_page = 15;
         $manga_per_page_start = ($page-1) * $manga_per_page; 
@@ -60,15 +59,14 @@
                 }
             }
         }
-        /* Atualizar depois */
+        // Atualizar depois
         $total_pages_sql = "SELECT COUNT(mangaID) FROM manga";
         $result = mysqli_query($conn,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $manga_per_page);
-        /*  */
     }
 
-    /* Personagens */
+    // Personagens
     if(isset($page) && $page > 0 && $_GET['view'] == 'characters') {
         $characters_per_page = 15;
         $characters_per_page_start = ($page-1) * $characters_per_page; 
@@ -90,15 +88,14 @@
                 }
             }
         }
-        /* Atualizar depois */
+        // Atualizar depois
         $total_pages_sql = "SELECT COUNT(characterID) FROM characters";
         $result = mysqli_query($conn,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $characters_per_page);
-        /*  */
     }
 
-    /* Usúarios */
+    // Usúarios
     if(isset($page) && $page > 0 && $_GET['view'] == 'users') {
         $users_per_page = 15;
         $users_per_page_start = ($page-1) * $users_per_page; 
@@ -120,12 +117,11 @@
                 }
             }
         }
-        /* Atualizar depois */
+        // Atualizar depois
         $total_pages_sql = "SELECT COUNT(userID) FROM users";
         $result = mysqli_query($conn,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $users_per_page);
-        /*  */
     }
 
     if($page < 1 || $page > $total_pages) {

@@ -7,7 +7,7 @@
     $animeID = $_GET['animeid'];
     $userID = $_SESSION['userID'];
 
-    /* Adicionar anime na lista */
+    // Adicionar anime na lista
     if(isset($_POST['add-submit'])) {
         if(isset($_SESSION['userID'])) {
             $sql = "SELECT animeID, userID FROM anime_users WHERE animeID=? AND userID=?";
@@ -45,7 +45,7 @@
         header("Location: ../anime.php?animeid=".$animeID);
     }
 
-    /* Remover anime da lista */
+    // Remover anime da lista
     if(isset($_POST['delete'])) {
         $sql = "DELETE FROM anime_users WHERE animeID=? AND userID=?";
         $smt = mysqli_stmt_init($conn);
@@ -66,7 +66,7 @@
         header("Location: ../anime.php?animeid=".$animeID);
     }
 
-    /* Adicionar anime aos favoritos */
+    // Adicionar anime aos favoritos
     if(isset($_POST['favorite-submit'])) { 
         $sql = "SELECT animeID, userID FROM anime_favorites WHERE animeID=? AND userID=?";
         $stmt = mysqli_stmt_init($conn);
@@ -114,7 +114,7 @@
         header("Location: ..anime.php?animeid=".$animeID);
     }
 
-    /* Remover anime dos favoritos */
+    // Remover anime dos favoritos
     if(isset($_POST['favorite-delete'])) {
         $sql = "DELETE FROM anime_favorites WHERE animeID=? AND userID=?";
         $smt = mysqli_stmt_init($conn);
@@ -135,7 +135,7 @@
         header("Location: ../anime.php?anime=".$animeID);
     }
 
-    /* Status do usúario no anime */
+    // Status do usúario no anime
     if(isset($_POST['status-submit'])) {
         $userStatus = $_POST['status-submit'];
         if($userStatus == '2' && $animeEpisodes != NULL) {
@@ -165,7 +165,7 @@
         header("Location: ../anime.php?animeid=".$animeID);
     }
 
-    /* Pontuação do usúario no anime */
+    // Pontuação do usúario no anime
     if(isset($_POST['score-submit'])) {
         $userScore = $_POST['score-submit'];
         if($userScore == "0") {
@@ -186,7 +186,7 @@
         header("Location: ../anime.php?animeid=".$animeID);
     }
 
-    /* Episódios do usúario no anime */
+    // Episódios do usúario no anime
     if(isset($_POST['episodes-submit'])) {
         $userEpisodes = $_POST['episodes-submit'];
 

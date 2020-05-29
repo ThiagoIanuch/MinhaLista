@@ -54,7 +54,7 @@
                 <div class="text-header">DESCUBRA NOVOS ANIMES E MANGAS!</div>
                     <div class="grid">
                         <?php 
-                        /* Mostrar anime/manga */
+                        // Mostrar anime/manga
                         for($i = 0; $i < count ($animeID), $i < count($animeTitle), $i < count($animeAvatar); $i++) {
                             echo '
                             <div class="shows-not-responsive">
@@ -69,7 +69,7 @@
                             </div>';
                         }
 
-                        /* Para quando o site for responsivo */
+                        // Para quando o site for responsivo
                         for($i = 0; $i < 3; $i++) {
                             echo '
                             <div class="shows-responsive">

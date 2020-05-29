@@ -51,22 +51,22 @@
                             
                             for($i = 0, $ii=0;$i < count($mangaID), $i < count($mangaTitle), $i < count($mangaAvatar), $i < count($mangaType), $i < count($mangaVolumes), $i < count($mangaStart), $i < count ($mangaEnd), $i < count($mangaUsers), $i < count($mangaScore); $i++, $ii++) {
                             
-                            /* Dia início */$dayStart[$i] = substr($mangaStart[$i], -2, 2);
-                            /* Mes início */ $monthStart[$i] = substr($mangaStart[$i], -5, 2);
-                            /* Ano início */ $yearStart[$i] = substr($mangaStart[$i], -10, 4);
+                            $dayStart[$i] = substr($mangaStart[$i], -2, 2); // Dia início
+                            $monthStart[$i] = substr($mangaStart[$i], -5, 2); // Mes início
+                            $yearStart[$i] = substr($mangaStart[$i], -10, 4); // Ano início
 
-                            /* Dia final */$dayEnd[$i] = substr($mangaEnd[$i], -2, 2);
-                            /* Mês final */ $monthEnd[$i] = substr($mangaEnd[$i], -5, 2);
-                            /* Ano final */ $yearEnd[$i] = substr($mangaEnd[$i], -10, 4);
+                            $dayEnd[$i] = substr($mangaEnd[$i], -2, 2); // Dia final
+                            $monthEnd[$i] = substr($mangaEnd[$i], -5, 2); // Mês final
+                            $yearEnd[$i] = substr($mangaEnd[$i], -10, 4); // Ano final
                                             
-                            /* Data de início */
+                            // Data de início
                             if($mangaStart[$i] != null) {
-                                /* Exibir o mês e o ano */
+                                // Exibir o mês e o ano
                                 if($yearStart[$i] > 0 && $monthStart[$i] > 0 && $dayStart[$i] >= 0) {
                                     $mangaStart[$i] = $yearStart[$i].'-'.$monthStart[$i].'-'.'01';
                                     $mangaStart[$i] = strftime('%b, %Y',strtotime($mangaStart[$i])).' até ';
                                 }
-                                /* Se o mês for nulo, exibir apenas o ano */
+                                // Se o mês for nulo, exibir apenas o ano
                                 else if($yearStart[$i] > 0 && $monthStart[$i] <= 0 && $dayStart[$i] <= 0) {
                                     $mangaStart[$i] = $yearStart[$i].'-'.'01'.'-'.'01';
                                     $mangaStart[$i] = strftime('%Y',strtotime($mangaStart[$i])).' até ';
@@ -81,16 +81,15 @@
                             else {
                                 $mangaStart[$i] = '? até ';
                             }
-                            /*  */
 
-                            /* Data de término */
+                            // Data de término
                             if($mangaEnd[$i] != null) {
-                                /* Exibir o mês e o ano */
+                                // Exibir o mês e o ano
                                 if($yearEnd[$i] > 0 && $monthEnd[$i] > 0 && $dayEnd[$i] >= 0) {
                                     $mangaEnd[$i] = $yearEnd[$i].'-'.$monthEnd[$i].'-'.'01';
                                     $mangaEnd[$i] = strftime('%b, %Y',strtotime($mangaEnd[$i]));
                                 }
-                                /* Se o mês for nulo, exibir apenas o ano */
+                                // Se o mês for nulo, exibir apenas o ano
                                 else if($yearEnd[$i] > 0 && $monthEnd[$i] <= 0 && $dayEnd[$i] <= 0) {
                                     $mangaEnd[$i] = $yearEnd[$i].'-'.'01'.'-'.'01';
                                     $mangaEnd[$i] = strftime('%Y',strtotime($mangaEnd[$i]));
@@ -107,7 +106,6 @@
                             }
 
                             $mangaAired[$i] = ucfirst($mangaStart[$i]).ucfirst($mangaEnd[$i]);
-                            /*  */
 
                             if(empty($mangaVolumes[$i])) {
                                 $mangaVolumes[$i] = '?';

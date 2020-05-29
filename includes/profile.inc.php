@@ -4,7 +4,7 @@
         $userID = $_GET['userid'];
     }
 
-    /* Informações do usúario */
+    // Informações do usúario
     if(isset($userID)) {
         $sql = "SELECT userName, userPermissions, userAvatar, userBanner, userAbout, userGender, userBirthday, userLocalization, userDate, userOnlineStatus, userBanStatus FROM users WHERE userID=?";
         $stmt = mysqli_stmt_init($conn);
@@ -55,14 +55,14 @@
         }
     }
 
-    /* Se o usúario estiver banido, mover para página de banido */
+    // Se o usúario estiver banido, mover para página de banido
     if($userBanStatus == 1) {
         header("HTTP/1.1 404 Not Found");
         include "profile-banned.php";
         exit();
     }
 
-    /* Contar o número de anime em cada status */
+    // Contar o número de anime em cada status
     if(isset($_GET['userid'])) {
         $userID = $_GET['userid'];
         $sql = "SELECT userStatus, count(*) AS statusCount FROM anime_users WHERE userID=? GROUP BY userStatus";
@@ -155,7 +155,7 @@
         exit();
     }
 
-    /* Contar o número de manga em cada status */
+    // Contar o número de manga em cada status
     if(isset($_GET['userid'])) {
         $userID = $_GET['userid'];
         $sql = "SELECT userStatus, count(*) AS statusCount FROM manga_users WHERE userID=? GROUP BY userStatus";
@@ -248,7 +248,7 @@
         exit();
     }
 
-    /* Total de animes adicionados e total de episódios */
+    // Total de animes adicionados e total de episódios
     if(isset($_GET['userid'])) {
         $sql = "SELECT userID, count(userStatus) AS animeStatusTotal, SUM(userEpisodes) AS animeEpisodesTotal FROM anime_users WHERE userID=?";
         $stmt = mysqli_stmt_init($conn);
@@ -271,7 +271,7 @@
         exit();
     }
 
-    /* Total de manga adicionados e total de capítulos e volumes */
+    // Total de manga adicionados e total de capítulos e volumes
     if(isset($_GET['userid'])) {
         $sql = "SELECT userID, count(userStatus) AS mangaStatusTotal, SUM(userChapters) AS mangaChaptersTotal, SUM(userVolumes) AS mangaVolumesTotal FROM manga_users WHERE userID=?";
         $stmt = mysqli_stmt_init($conn);
@@ -295,7 +295,7 @@
         exit();
     }
 
-    /* Lista de animes favoritos */
+    // Lista de animes favoritos
     if(isset($_GET['userid'])) {
         $sql = "SELECT a.animeAvatar, a.animeID, a.animeTitle FROM anime a JOIN anime_favorites af ON a.animeID = af.animeID WHERE userID=? ORDER BY af.ID";
         $stmt = mysqli_stmt_init($conn);
@@ -320,7 +320,7 @@
         }
     }
 
-    /* Lista de manga favoritos */
+    // Lista de manga favoritos
     if(isset($_GET['userid'])) {
         $sql = "SELECT m.mangaAvatar, m.mangaID, m.mangaTitle FROM manga m JOIN manga_favorites mf ON m.mangaID = mf.mangaID WHERE userID=? ORDER BY mf.ID";
         $stmt = mysqli_stmt_init($conn);
@@ -345,7 +345,7 @@
         }
     }
 
-    /* Lista de personagens favoritos */
+    // Lista de personagens favoritos
     if(isset($_GET['userid'])) {
         $sql = "SELECT c.characterAvatar, c.characterID, c.characterName FROM characters c JOIN characters_favorites cf ON c.characterID = cf.characterID WHERE userID=? ORDER BY cf.ID";
         $stmt = mysqli_stmt_init($conn);

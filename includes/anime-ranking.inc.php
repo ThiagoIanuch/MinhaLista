@@ -1,6 +1,6 @@
 <?php
     include "includes/db.inc.php";
-    /* Anime ranking */
+    // Anime ranking
     if (isset($_GET['page']) && $_GET['page'] > 0) {
         $page = $_GET['page'];
         $anime_per_page = 5;

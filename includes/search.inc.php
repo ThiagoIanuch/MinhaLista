@@ -13,10 +13,10 @@
 
 
     if(isset($_GET['s'])) {
-        /* Valor da pesquisa */
+        // Valor da pesquisas
         $searchValue = "%{$_GET['s']}%";
 
-        /* Pesquisar por anime */
+        // Pesquisar por anime
         $sql = "SELECT animeID, animeTitle, animeAvatar, animeType, animeEpisodes, animeStatus, animeGenres FROM anime WHERE animeTitle LIKE ? ORDER BY animeTitle LIMIT 10";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
@@ -50,7 +50,7 @@
             }
         }
 
-        /* Pesquisar por manga */
+        // Pesquisar por manga
         $sql = "SELECT mangaID, mangaTitle, mangaAvatar, mangaType, mangaVolumes, mangaStatus, mangaGenres FROM manga WHERE mangaTitle LIKE ? ORDER BY mangaTitle LIMIT 10";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
@@ -84,7 +84,7 @@
             }
         }
         
-        /* Pesquisar por personagens */
+        // Pesquisar por personagens
         $sql = "SELECT characterID, characterName, characterAvatar FROM characters WHERE characterName LIKE ? ORDER BY characterName LIMIT 10";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
@@ -111,7 +111,7 @@
             }
         }
 
-        /* Pesquisar por usúarios */
+        // Pesquisar por usúarios
         $sql = "SELECT userID, userName, userAvatar, userDate, userGender FROM users WHERE userName LIKE ? ORDER BY userName LIMIT 10";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {

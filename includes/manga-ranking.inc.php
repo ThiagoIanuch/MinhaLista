@@ -1,6 +1,6 @@
 <?php
     include "includes/db.inc.php";
-	/* Manga ranking */
+	// Manga ranking
     if (isset($_GET['page']) && $_GET['page'] > 0) {
         $page = $_GET['page'];
         $manga_per_page = 5;

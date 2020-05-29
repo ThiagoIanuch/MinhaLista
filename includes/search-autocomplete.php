@@ -2,10 +2,10 @@
     include "db.inc.php";
 
     if(isset($_GET['term'])) {
-        /* Valor digitado */
+        // Valor digitado
         $searchValue = "%{$_GET['term']}%";
 
-        /* Pesquisar por anime */
+        // Pesquisar por anime
         $sql = "SELECT animeID, animeTitle, animeAvatar FROM anime WHERE animeTitle LIKE ? ORDER BY animeTitle LIMIT 2";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
@@ -35,7 +35,7 @@
             }   
         }
 
-        /* Pesquisar por manga */
+        // Pesquisar por manga
         $sql = "SELECT mangaID, mangaTitle, mangaAvatar FROM manga WHERE mangaTitle LIKE ? ORDER BY mangaTitle LIMIT 2";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
@@ -65,7 +65,7 @@
             }   
         }
 
-        /* Pesquisar por personagens */
+        // Pesquisar por personagens
         $sql = "SELECT characterID, characterName, characterAvatar FROM characters WHERE characterName LIKE ? ORDER BY characterName LIMIT 2";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
@@ -95,7 +95,7 @@
             }   
         }
 
-        /* Pesquisar por usúarios */
+        // Pesquisar por usúarios
         $sql = "SELECT userID, userName, userAvatar FROM users WHERE userName LIKE ? ORDER BY userName LIMIT 2";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
@@ -127,7 +127,7 @@
                 }
             }   
         }
-        /* Mostrar resultado */
+        // Mostrar resultado
         echo json_encode($data);
     }
     else {

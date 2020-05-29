@@ -57,9 +57,9 @@
 
                     <img src="img/logo1.png">
                     <?php
-                    /* Anime */
+                    // Anime
                     if($_GET['config'] == 'add-anime') {
-                        /* Opções para selecionar os gêneros */
+                        // Opções para selecionar os gêneros
                         $animeGenresOptions = array("Ação", "Aventura", "Carros", "Comédia", "Dementia", "Dêmonios", "Drama", "Ecchi", "Fantasia", "Jogo", "Harém", "Hentai", "Historical", "Horror", "Josei", "Crianças", "Magia", "Artes Marciais", "Mecha", "Militar", "Música", "Mistério", "Paródia", "Policial", "Psicológico", "Romance", "Samurai", "Escolar", "Ficção Científica", "Seinen", "Shoujo", "Shoujo Ai", "Shounen", "Shounen Ai", "Fátia de Vida", "Espaço", "Esportes", "Super Poder", "Sobrenatural", "Thriller", "Vampiro", "Yaoi", "Yuri");
 
                         echo '
@@ -212,9 +212,9 @@
                         </form>';
                     }
 
-                    /* Manga */
+                    // Manga
                     if($_GET['config'] == 'add-manga') {
-                        /* Opções para selecionar os gêneros */
+                        // Opções para selecionar os gêneros
                         $mangaGenresOptions = array("Ação", "Aventura", "Carros", "Comédia", "Dementia", "Dêmonios", "Doujinshi", "Drama", "Ecchi", "Fantasia", "Jogo", "Gênero Bender", "Harém", "Hentai", "Historical", "Horror", "Josei", "Crianças", "Magia", "Artes Marciais", "Mecha", "Militar", "Música", "Mistério", "Paródia", "Policial", "Psicológico", "Romance", "Samurai", "Escolar", "Ficção Científica", "Seinen", "Shoujo", "Shoujo Ai", "Shounen", "Shounen Ai", "Fátia de Vida", "Espaço", "Esportes", "Super Poder", "Sobrenatural", "Thriller", "Vampiro", "Yaoi", "Yuri");
 
                         echo '
@@ -359,7 +359,7 @@
                         </form>';
                     }
 
-                    /* Personagem */
+                    // Personagem
                     if($_GET['config'] == 'add-character') {
                         echo '
                         <form action="includes/admin-add.inc.php?config=add-character" method="post" enctype="multipart/form-data" id="character-add">             

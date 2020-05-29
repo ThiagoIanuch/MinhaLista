@@ -43,7 +43,7 @@ if(isset($_POST["signup-submit"])) {
         $sql = "SELECT userName, userEmail FROM users WHERE userName=? OR userEmail=?";
         $stmt = mysqli_stmt_init($conn);
         
-        /* */
+        //
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("Location: ../signup.php?error=sqlerror");
             exit();
@@ -54,7 +54,7 @@ if(isset($_POST["signup-submit"])) {
             mysqli_stmt_store_result($stmt);
             $resultCheck = mysqli_stmt_num_rows($stmt);
 
-            /* */ 
+            //
             if ($resultCheck > 0) {
                 header("Location: ../signup.php?error=useremailtaken");
                 exit();
@@ -63,7 +63,7 @@ if(isset($_POST["signup-submit"])) {
                 $sql = "INSERT INTO users (userName, userEmail, userPassword, userDate) VALUES (?, ?, ?, ?)";
                 $stmt = mysqli_stmt_init($conn);
 
-                /* */
+                //
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
                     header("Location: ../signup.php?error=sqlerror");
                     exit();

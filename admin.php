@@ -71,7 +71,7 @@
                             $pageNext = $page+$pageSum;
                             $pagePrevious = $page-$pageSum;
 
-                            /* Página anterior */
+                            // Página anterior
                             if($view == "anime") {
                                 if($page <= $total_pages && $page != 1) {
                                     echo '<a href="admin.php?view=anime&page='.$pagePrevious.'" class="page-button">Anterior</a>';
@@ -93,7 +93,7 @@
                                 }
                             }
 
-                            /* Próxima página */
+                            // Próxima página
                             if($view == "anime") {
                                 if($page < $total_pages) {
                                     echo '<a href="admin.php?view=anime&page='.$pageNext.'" class="page-button">Próximo</a>';
@@ -118,7 +118,7 @@
                     </div>
 
                     <?php
-                    /* Anime */
+                    // Anime
                     if($view == 'anime') {
                     echo '
                     <div class="anime-container">
@@ -149,12 +149,12 @@
                                 <a href="admin-add.php?config=add-anime" target="_blank" class="clear">Adicionar</a>
                             </span>
                         </div>
-                    </div>'; /* Anime */
+                    </div>'; // Anime
                     }
                     ?>
 
                 <?php
-                    /* Manga */
+                    // Manga
                     if($view == 'manga') {
                     echo '
                     <div class="manga-container">
@@ -185,12 +185,12 @@
                                 <a href="admin-add.php?config=add-manga" target="_blank" class="clear">Adicionar</a>
                             </span>
                         </div>
-                    </div>'; /* Manga */
+                    </div>'; // Manga
                     }
                 ?>
 
                 <?php
-                    /* Personagens */
+                    // Personagens
                     if($view == 'characters') {
                     echo '
                     <div class="characters-container">
@@ -221,12 +221,12 @@
                                 <a href="admin-add.php?config=add-character" target="_blank" class="clear">Adicionar</a>
                             </span>
                         </div>
-                    </div>'; /* Personagens */
+                    </div>'; // Personagens
                     }
                 ?>
 
                 <?php
-                    /* Usuários */
+                    // Usuários
                     if($view == 'users') {
                     echo '
                     <div class="users-container">
@@ -255,7 +255,7 @@
                             <span></span>
                             <span></span>
                         </div>
-                    </div>'; /* Usúarios */
+                    </div>'; // Usúarios
                     }
                 ?>
                 </div> <!-- Container -->

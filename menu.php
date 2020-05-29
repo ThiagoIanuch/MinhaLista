@@ -199,7 +199,7 @@
         <div class="menu-responsive-links" id="links">
             <ul>
                 <?php
-                    /* Se o usuário estiver logado */
+                    // Se o usuário estiver logado
                     if(isset($_SESSION['userID'])) {
                         echo '
                         <a href="profile.php?userid='.$_SESSION['userID'].'"><li>Meu perfil</li></a>
@@ -217,7 +217,7 @@
                         </form>
                        ';
                     }
-                    /* Se o usuário não estiver logado */
+                    // Se o usuário não estiver logado
                     else {
                         echo '
                         <a href="login.php"><li>Entrar</li></a>

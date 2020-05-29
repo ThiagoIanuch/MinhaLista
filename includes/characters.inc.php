@@ -1,7 +1,7 @@
 <?php
     include "db.inc.php";
 
-    /* Exibir personagens na página de anime */
+    // Exibir personagens na página de anime
     if(isset($_GET['animeid'])) {
         $sql = "SELECT c.characterID, c.characterName, c.characterAvatar, ac.characterRole FROM characters c JOIN anime_characters ac ON c.characterID = ac.characterID WHERE animeid=? ORDER BY ac.characterRole LIMIT 6";
         $stmt = mysqli_stmt_init($conn);
@@ -31,7 +31,7 @@
         }
     }
 
-    /* Exibir personagens na página de manga */
+    // Exibir personagens na página de manga
     if(isset($_GET['mangaid'])) {
         $sql = "SELECT c.characterID, c.characterName, c.characterAvatar, mc.characterRole FROM characters c JOIN manga_characters mc ON c.characterID = mc.characterID WHERE mangaid=? ORDER BY mc.characterRole LIMIT 6";
         $stmt = mysqli_stmt_init($conn);
@@ -61,7 +61,7 @@
         }
     }
 
-    /* Exibir personagens na página de personagens */
+    // Exibir personagens na página de personagens
     if(isset($_GET['characterid'])) {
         $characterID = $_GET['characterid'];
         $sql = "SELECT characterID, characterName, characterAvatar, characterInfo FROM characters WHERE characterID=?";
@@ -90,7 +90,7 @@
         }
     }
 
-    /* Verificar se o usúario já adicionou nos favoritos */
+    // Verificar se o usúario já adicionou nos favoritos
     if(isset($_SESSION['userID']) && isset($_GET['characterid'])) {
         $characterID = $_GET['characterid'];
         $userID = $_SESSION['userID'];
@@ -107,7 +107,7 @@
         }
     }
 
-    /* Adicionar ou remover personagem dos favoritos */
+    // Adicionar ou remover personagem dos favoritos
     if(isset($_POST['favorite-submit'])) {
         session_start();
         include "session-update.inc.php";
@@ -184,7 +184,7 @@
         }
     }
 
-    /* Contar número de favoritos */
+    // Contar número de favoritos
     if(isset($_GET['characterid'])) {
         $characterID = $_GET['characterid'];
         $sql = "SELECT ID from characters_favorites WHERE characterID=?";

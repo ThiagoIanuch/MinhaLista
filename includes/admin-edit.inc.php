@@ -8,7 +8,7 @@
         $allowed = array('jpg', 'jpeg', 'png');
     }
 
-    /* Exibir personagens ao editar anime/manga */
+    // Exibir personagens ao editar anime/manga
     if(isset($_GET['config']) && isset($_GET['animeid']) || isset($_GET['mangaid'])) {
         if(isset($_GET['animeid'])) {
             $showRequest = $_GET['animeid'];
@@ -41,7 +41,7 @@
         }
     }
 
-    /* Exibir dados do anime */
+    // Exibir dados do anime
     if(isset($_GET['config']) && isset($_GET['animeid'])) {
         if($_GET['config'] == 'edit') {
             $animeID = $_GET['animeid'];
@@ -73,16 +73,16 @@
         }
     }
 
-    /* Alterar dados do anime */
+    // Alterar dados do anime
     if(isset($_POST['anime-edit'])) {
-        /* ID do anime a ser alterado */
+        // ID do anime a ser alterado
         $animeIDEdit = $_GET['animeid'];
 
-        /* Outras configurações */
+        // Outras configurações */
         $animeTitleEdit = $_POST['title'];
         $animeSinopseEdit = $_POST['sinopse'];
 
-        /* Pegar o avatar e banner */
+        // Pegar o avatar e banner
         $animeAvatarNameEdit = $_FILES['avatar']['name'];
         $animeAvatarTmpNameEdit = $_FILES['avatar']['tmp_name'];
         $animeAvatarSizeEdit = $_FILES['avatar']['size'];
@@ -99,7 +99,7 @@
         $animeBannerExtEdit = explode('.', $animeBannerNameEdit);
         $animeBannerActualExtEdit = strtolower(end($animeBannerExtEdit));
 
-        /* Outras configurações */
+        // Outras configurações
         $animeTypeEdit = $_POST['type'];
         $animeEpisodesEdit = $_POST['episodes'];
         $animeStatusEdit = $_POST['status'];
@@ -113,12 +113,12 @@
         $animeYearEndEdit = $_POST['yearEnd'];
         $animeEndEdit = $animeYearEndEdit.'-'.$animeMonthEndEdit.'-'.$animeDayEndEdit;
 
-        /* Se o título for nulo */
+        // Se o título for nulo
         if(empty($animeTitleEdit)) {
             $animeTitleEdit = $animeTitle;
         }
    
-        /* Confirmações para enviar o avatar */
+        // Confirmações para enviar o avatar
         if(!empty($animeAvatarNameEdit)) {
             if(in_array($animeAvatarActualExtEdit, $allowed)) {
                 if($animeAvatarErrorEdit === 0) {
@@ -130,7 +130,7 @@
             }
         }
         
-        /* Confirmações para enviar o banner */
+        // Confirmações para enviar o banner
         if(empty($_POST['bannerCheck']) && !empty($animeBannerNameEdit)) {
             if(in_array($animeBannerActualExtEdit, $allowed)) {
                 if($animeBannerErrorEdit === 0) {
@@ -142,17 +142,17 @@
             }
         }
         
-        /* Se a sinopse for nula */
+        // Se a sinopse for nula
         if(empty($animeSinopseEdit)) {
             $animeSinopseEdit = null;
         }
 
-        /* Se os episódios não forem números | for nulo | ou maior que 4 digitos || ou menor que 0*/
+        // Se os episódios não forem números | for nulo | ou maior que 4 digitos || ou menor que 0
         if(!is_numeric($animeEpisodesEdit)|| empty($animeEpisodesEdit) || strlen($animeEpisodesEdit) > 4 || $animeEpisodesEdit < 0) {
             $animeEpisodesEdit = null;
         }
 
-        /* Se o ano de início for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula */
+        // Se o ano de início for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula
         if($animeYearStartEdit == '0000') {
             $animeStartEdit = $animeStart;
         }
@@ -163,7 +163,7 @@
             $animeStartEdit = null;
         }
 
-        /* Se o ano de término for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula */
+        // Se o ano de término for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula
         if($animeYearEndEdit == '0000') {
             $animeEndEdit = $animeEnd;
         }
@@ -174,7 +174,7 @@
             $animeEndEdit = null;
         }
 
-        /* Se a data de término for menor que a de início */
+        // Se a data de término for menor que a de início
         if($animeEndEdit != null) {
             if($animeStartEdit > $animeEndEdit) {
                 $animeStartEdit = null;
@@ -182,12 +182,12 @@
             }
         }
 
-        /* Se a fonte for nula */
+        // Se a fonte for nula
         if(empty($animeSourceEdit)) {
             $animeSourceEdit = null;
         }
 
-        /* Enviar todos os gêneros */
+        // Enviar todos os gêneros
         if(empty($_POST['genres'])) {
             $animeGenresEdit = null;
         }
@@ -231,7 +231,7 @@
             mysqli_stmt_execute($stmt);
         }
             
-        /* Verificar o número de personagens que existem no banco de dados */
+        // Verificar o número de personagens que existem no banco de dados
         $sqlCharacterVerify = "SELECT characterID FROM characters";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sqlCharacterVerify)) {
@@ -243,7 +243,7 @@
             $characterVerifyTotal = mysqli_num_rows($characterVerify);
         }
 
-        /* Pegar o ID de cada personagem e se ele é principal ou secundário */
+        // Pegar o ID de cada personagem e se ele é principal ou secundário
         $characterIDPost = $_POST['characterID'];
         $characterRolePost = $_POST['characterRole'];
 
@@ -251,7 +251,7 @@
             $characterIDEdit = $characterIDPost[$i];
             $characterRoleEdit = $characterRolePost[$i];
 
-            /* Adicionar/substitir na tabela apenas se existir um personagem a ser adicionado/alterado no formulário e se o personagem existir no banco de dados */
+            // Adicionar/substitir na tabela apenas se existir um personagem a ser adicionado/alterado no formulário e se o personagem existir no banco de dados
             if($characterIDEdit > 0 && $characterIDEdit <= $characterVerifyTotal && !empty($characterRoleEdit)) {
                 $sqlCharactersEdit = "REPLACE INTO anime_characters (ID, animeID, characterID, characterRole) VALUES(?,?,?,?)";
                 $stmt = mysqli_stmt_init($conn);
@@ -264,7 +264,7 @@
                 }
             }
 
-            /* Se a pessoa quiser excluir o personagem da lista do anime */
+            // Se a pessoa quiser excluir o personagem da lista do anime
             else if(empty($characterIDEdit) && empty($characterRoleEdit)) {
                 $sqlCharactersEdit = "DELETE FROM anime_characters WHERE ID=?;";
                 $stmt = mysqli_stmt_init($conn);
@@ -278,17 +278,17 @@
             }
         }
 
-        /* Atualizar o AUTO_INCREMENT da tabela, para evitar dados errados quando dados são deletados */
+        // Atualizar o AUTO_INCREMENT da tabela, para evitar dados errados quando dados são deletados
         $sqlTableUpdate = "SET @num = 0;";
         $sqlTableUpdate .= "UPDATE anime_characters SET ID = @num := (@num+1);";
         $sqlTableUpdate .= "ALTER TABLE anime_characters AUTO_INCREMENT =1;";
         mysqli_multi_query($conn, $sqlTableUpdate);
 
-        /* Voltar para a página de edição do anime */
+        // Voltar para a página de edição do anime
         header("Location: ../admin-edit.php?config=edit&animeid=".$animeIDEdit);
     }
 
-    /* Exibir dados do manga */
+    // Exibir dados do manga
     if(isset($_GET['config']) && isset($_GET['mangaid'])) {
         if($_GET['config'] == 'edit') {
             $mangaID = $_GET['mangaid'];
@@ -320,16 +320,16 @@
         }
     }
 
-    /* Alterar dados do manga */
+    // Alterar dados do manga
     if(isset($_POST['manga-edit'])) {
-        /* ID do manga a ser alterado */
+        // ID do manga a ser alterado
         $mangaIDEdit = $_GET['mangaid'];
 
-        /* Outras configurações */
+        // Outras configurações */
         $mangaTitleEdit = $_POST['title'];
         $mangaSinopseEdit = $_POST['sinopse'];
 
-        /* Pegar o avatar e banner */
+        // Pegar o avatar e banner
         $mangaAvatarNameEdit = $_FILES['avatar']['name'];
         $mangaAvatarTmpNameEdit = $_FILES['avatar']['tmp_name'];
         $mangaAvatarSizeEdit = $_FILES['avatar']['size'];
@@ -346,7 +346,7 @@
         $mangaBannerExtEdit = explode('.', $mangaBannerNameEdit);
         $mangaBannerActualExtEdit = strtolower(end($mangaBannerExtEdit));
 
-        /* Outras configurações  */
+        // Outras configurações
         $mangaTypeEdit = $_POST['type'];
         $mangaChaptersEdit = $_POST['chapters'];
 		$mangaVolumesEdit = $_POST['volumes'];
@@ -360,12 +360,12 @@
         $mangaYearEndEdit = $_POST['yearEnd'];
         $mangaEndEdit = $mangaYearEndEdit.'-'.$mangaMonthEndEdit.'-'.$mangaDayEndEdit;
 
-        /* Se o título for nulo */
+        // Se o título for nulo
         if(empty($mangaTitleEdit)) {
             $mangaTitleEdit = $mangaTitle;
         }
 
-        /* Confirmações para enviar o avatar */
+        // Confirmações para enviar o avatar
         if(!empty($mangaAvatarNameEdit)) {
             if(in_array($mangaAvatarActualExtEdit, $allowed)) {
                 if($mangaAvatarErrorEdit === 0) {
@@ -377,7 +377,7 @@
             }
         }
 
-        /* Confirmações para enviar o banner */
+        // Confirmações para enviar o banner
         if(empty($_POST['bannerCheck']) && !empty($mangaBannerNameEdit)) {
             if(in_array($mangaBannerActualExtEdit, $allowed)) {
                 if($mangaBannerErrorEdit === 0) {
@@ -389,22 +389,22 @@
             }
         }
 
-        /* Se a sinopse for nula */
+        // Se a sinopse for nula
         if(empty($mangaSinopseEdit)) {
             $mangaSinopseEdit = null;
         }
 
-        /* Se os capítulos não forem números | for nulo | ou maior que 4 digitos || ou menor que 0*/
+        // Se os capítulos não forem números | for nulo | ou maior que 4 digitos || ou menor que 0
         if(!is_numeric($mangaChaptersEdit)|| empty($mangaChaptersEdit) || strlen($mangaChaptersEdit) > 4 || $mangaChaptersEdit < 0) {
             $mangaChaptersEdit = null;
         }
 
-        /* Se os volumes não forem números | for nulo | ou maior que 4 digitos || ou menor que 0*/
+        // Se os volumes não forem números | for nulo | ou maior que 4 digitos || ou menor que 0
         if(!is_numeric($mangaVolumesEdit)|| empty($mangaVolumesEdit) || strlen($mangaVolumesEdit) > 4 || $mangaVolumesEdit < 0) {
             $mangaVolumesEdit = null;
         }
 
-        /* Se o ano de início for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula */
+        // Se o ano de início for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula
         if($mangaYearStartEdit == '0000') {
             $mangaStartEdit = $mangaStart;
         }
@@ -415,7 +415,7 @@
             $mangaStartEdit = null;
         }
 
-        /* Se o ano de término for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula */
+        // Se o ano de término for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula
         if($mangaYearEndEdit == '0000') {
             $mangaEndEdit = $mangaEnd;
         }
@@ -426,7 +426,7 @@
             $mangaEndEdit = null;
         }
 
-        /* Se a data de término for menor que a de início */
+        // Se a data de término for menor que a de início
         if($mangaEndEdit != null) {
             if($mangaStartEdit > $mangaEndEdit) {
                 $mangaStartEdit = null;
@@ -434,7 +434,7 @@
             }
         }
         
-        /* Enviar todos os gêneros */
+        // Enviar todos os gêneros
         if(empty($_POST['genres'])) {
             $mangaGenresEdit = null;
         }
@@ -478,7 +478,7 @@
             mysqli_stmt_execute($stmt);
         }
     
-        /* Verificar o número de personagens que existem no banco de dados */
+        // Verificar o número de personagens que existem no banco de dados
         $sqlCharacterVerify = "SELECT characterID FROM characters";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sqlCharacterVerify)) {
@@ -490,7 +490,7 @@
             $characterVerifyTotal = mysqli_num_rows($characterVerify);
         }
 
-        /* Pegar o ID de cada personagem e se ele é principal ou secundário */
+        // Pegar o ID de cada personagem e se ele é principal ou secundário
         $characterIDPost = $_POST['characterID'];
         $characterRolePost = $_POST['characterRole'];
 
@@ -498,7 +498,7 @@
             $characterIDEdit = $characterIDPost[$i];
             $characterRoleEdit = $characterRolePost[$i];
 
-            /* Adicionar/substitir na tabela apenas se existir um personagem a ser adicionado/alterado no formulário e se o personagem existir no banco de dados */
+            // Adicionar/substitir na tabela apenas se existir um personagem a ser adicionado/alterado no formulário e se o personagem existir no banco de dados
             if($characterIDEdit > 0 && $characterIDEdit <= $characterVerifyTotal && !empty($characterRoleEdit)) {
                 $sqlCharactersEdit = "REPLACE INTO manga_characters (ID, mangaID, characterID, characterRole) VALUES(?,?,?,?)";
                 $stmt = mysqli_stmt_init($conn);
@@ -511,7 +511,7 @@
                 }
             }
 
-            /* Se a pessoa quiser excluir o personagem da lista do anime */
+            // Se a pessoa quiser excluir o personagem da lista do anime
             else if(empty($characterIDEdit) && empty($characterRoleEdit)) {
                 $sqlCharactersEdit = "DELETE FROM manga_characters WHERE ID=?;";
                 $stmt = mysqli_stmt_init($conn);
@@ -525,17 +525,17 @@
             }
         }
 
-        /* Atualizar o AUTO_INCREMENT da tabela, para evitar dados errados quando dados são deletados */
+        // Atualizar o AUTO_INCREMENT da tabela, para evitar dados errados quando dados são deletados
         $sqlTableUpdate = "SET @num = 0;";
         $sqlTableUpdate .= "UPDATE manga_characters SET ID = @num := (@num+1);";
         $sqlTableUpdate .= "ALTER TABLE manga_characters AUTO_INCREMENT =1;";
         mysqli_multi_query($conn, $sqlTableUpdate);
 
-        /* Voltar para a página de edição do manga */
+        // Voltar para a página de edição do manga
         header("Location: ../admin-edit.php?config=edit&mangaid=".$mangaIDEdit);
     }
     
-    /* Exibir dados do personagem */
+    // Exibir dados do personagem
     if(isset($_GET['config']) && isset($_GET['characterid'])) {
         if($_GET['config'] == 'edit') {
             $characterID = $_GET['characterid'];
@@ -560,15 +560,15 @@
         }
     }
 
-    /* Alterar dados do personagem */
+    // Alterar dados do personagem
     if(isset($_POST['character-edit'])) {
-        /* ID */
+        // ID
         $characterIDEdit = $_GET['characterid'];
 
-        /* Nome */
+        // Nome
         $characterNameEdit = $_POST['name'];
 
-        /* Pegar o avatar */
+        // Pegar o avatar
         $characterAvatarNameEdit = $_FILES['avatar']['name'];
         $characterAvatarTmpNameEdit = $_FILES['avatar']['tmp_name'];
         $characterAvatarSizeEdit = $_FILES['avatar']['size'];
@@ -577,15 +577,15 @@
         $characterAvatarExtEdit = explode('.', $characterAvatarNameEdit);
         $characterAvatarActualExtEdit = strtolower(end($characterAvatarExtEdit));
 
-        /* Info */
+        // Info
         $characterInfoEdit = $_POST['info'];
 
-        /* Se o nome for nulo */
+        // Se o nome for nulo
         if(empty($characterNameEdit)) {
             $characterNameEdit = $characterName;
         }
 
-        /* Confirmações para enviar o avatar */
+        // Confirmações para enviar o avatar
         if(!empty($characterAvatarNameEdit)) {
             if(in_array($characterAvatarActualExtEdit, $allowed)) {
                 if($characterAvatarErrorEdit === 0) {
@@ -597,7 +597,7 @@
             }
         }
 
-        /* Se a informação for nula */
+        // Se a informação for nula
         if(empty($characterInfoEdit)) {
             $characterInfoEdit = null;
         }
@@ -621,7 +621,7 @@
         }
     }
 
-    /* Exibir dados do usúario */
+    // Exibir dados do usúario
     if(isset($_GET['config']) && isset($_GET['userid'])) {
         if($_GET['config'] == 'edit') {
             $userID = $_GET['userid'];
@@ -656,7 +656,7 @@
         }
     }    
 
-    /* Alterar dados do usúario */
+    // Alterar dados do usúario
     if(isset($_POST['user-edit']) || isset($_POST['user-ban']) || isset($_POST['user-desban'])) {
         $userIDEdit = $_GET['userid'];
         $userNameEdit = $_POST['name'];
@@ -699,17 +699,17 @@
         $userBirthdayEdit = $userYearBirthdayEdit.'-'.$userMonthBirthdayEdit.'-'.$userDayBirthdayEdit;
         $userLocalizationEdit = $_POST['localization'];
 
-        /* Manter o nome se conter caracteres não permitidos, ou se for maior que 16 ou menor que 2 */
+        // Manter o nome se conter caracteres não permitidos, ou se for maior que 16 ou menor que 2
         if(!preg_match("/^[a-zA-Z0-9]*$/", $userNameEdit) || strlen($userNameEdit) > 16 || strlen($userNameEdit) < 2) {
             $userNameEdit = $userName;
         }
 
-        /* Manter o email se não for válido */
+        // Manter o email se não for válido
         if (!filter_var($userEmailEdit, FILTER_VALIDATE_EMAIL)) {
             $userEmailEdit = $userEmail;
         }
 
-        /* Confirmações para enviar o avatar */
+        // Confirmações para enviar o avatar
         if(empty($_POST['avatarCheck']) && !empty($userAvatarNameEdit)) {
             if(in_array($userAvatarActualExtEdit, $allowed)) {
                 if($userAvatarErrorEdit === 0) {
@@ -721,7 +721,7 @@
             }
         }
         
-        /* Confirmações para enviar o banner */
+        // Confirmações para enviar o banner
         if(empty($_POST['bannerCheck']) && !empty($userBannerNameEdit)) {
             if(in_array($userBannerActualExtEdit, $allowed)) {
                 if($userBannerErrorEdit === 0) {
@@ -733,7 +733,7 @@
             }
         }
 		
-		/* Confirmações para enviar o banner da lista */
+		// Confirmações para enviar o banner da lista
         if(empty($_POST['bannerListCheck']) && !empty($userBannerListNameEdit)) {
             if(in_array($userBannerListActualExtEdit, $allowed)) {
                 if($userBannerListErrorEdit === 0) {
@@ -745,7 +745,7 @@
             }
         }
 
-        /* Se o sobre do usúario for nulo */
+        // Se o sobre do usúario for nulo
         if(empty($userAboutEdit)) {
             $userAboutEdit = null;
         }
@@ -753,12 +753,12 @@
             $userAbout = $_SESSION['userAbout'];
         }
         
-        /* Se alguma parte do aniversário for nula */
+        // Se alguma parte do aniversário for nula
         if($userDayBirthdayEdit == '00' || $userMonthBirthdayEdit == '00' || $userYearBirthdayEdit == '0000') {
             $userBirthdayEdit = null;
         }
 
-        /* Se a localização for nula ou maior que 12*/
+        // Se a localização for nula ou maior que 12
         if(empty($userLocalizationEdit)) {
             $userLocalizationEdit = null;
         }
@@ -843,7 +843,7 @@
                 mysqli_stmt_execute($stmt);
             }
 
-            /* Voltar para a página de edição de usúario */
+            // Voltar para a página de edição de usúario
             header("Location: ../admin-edit.php?config=edit&userid=".$userIDEdit);
         }
     }

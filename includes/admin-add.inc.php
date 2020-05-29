@@ -2,12 +2,12 @@
     include "db.inc.php";
     $allowed = array('jpg', 'jpeg', 'png');
 
-    /* Adicionar anime */
+    // Adicionar anime 
     if(isset($_POST['anime-add'])) {
         $animeTitleAdd = $_POST['title'];
         $animeSinopseAdd = $_POST['sinopse'];
     
-        /* Pegar o avatar e banner */
+        // Pegar o avatar e banner
         $animeAvatarNameAdd = $_FILES['avatar']['name'];
         $animeAvatarTmpNameAdd = $_FILES['avatar']['tmp_name'];
         $animeAvatarSizeAdd = $_FILES['avatar']['size'];
@@ -37,7 +37,7 @@
         $animeYearEndAdd = $_POST['yearEnd'];
         $animeEndAdd = $animeYearEndAdd.'-'.$animeMonthEndAdd.'-'.$animeDayEndAdd;
 
-        /* Não permitir o título nulo e avatar nulo*/
+        // Não permitir o título nulo e avatar nulo
         if(empty($animeTitleAdd) || empty($animeAvatarNameAdd)) {
             header("Location: ../admin-add.php?config=add-anime");
             exit();
@@ -62,7 +62,7 @@
                 }
             }
 
-            /* Confirmações para enviar o avatar */
+            // Confirmações para enviar o avatar
             if(!empty($animeAvatarNameAdd)) {
                 if(in_array($animeAvatarActualExtAdd, $allowed)) {
                     if($animeAvatarErrorAdd === 0) {
@@ -82,7 +82,7 @@
                 }
             }
             
-            /* Confirmações para enviar o banner */
+            // Confirmações para enviar o banner
             if(!empty($animeBannerNameAdd)) {
                 if(in_array($animeBannerActualExtAdd, $allowed)) {
                     if($animeBannerErrorAdd === 0) {
@@ -102,7 +102,7 @@
                 }
             }
 
-            /* Se a sinopse/banner/source não possuir nenhuma informação */
+            // Se a sinopse/banner/source não possuir nenhuma informação
             if(empty($animeSinopseAdd)) {
                 $animeSinopseAdd = null;
             }
@@ -113,12 +113,12 @@
                 $animeSourceAdd = null;
             }
 
-            /* Se os episódios não forem números | for nulo | ou maior que 4 digitos || ou menor que 0*/
+            // Se os episódios não forem números | for nulo | ou maior que 4 digitos || ou menor que 0
             if(!is_numeric($animeEpisodesAdd)|| empty($animeEpisodesAdd) || strlen($animeEpisodesAdd) > 4 || $animeEpisodesAdd < 0) {
                 $animeEpisodesAdd = null;
             }
 
-            /* Se o ano de início for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula */
+            // Se o ano de início for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula
             if($animeYearStartAdd == '0000') {
                 $animeStartAdd = null;
             }
@@ -129,7 +129,7 @@
                 $animeStartAdd = null;
             }
 
-            /* Se o ano de término for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula */
+            // Se o ano de término for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula
             if($animeYearEndAdd == '0000') {
                 $animeEndAdd = null;
             }
@@ -140,13 +140,13 @@
                 $animeEndAdd = null;
             }
 
-            /* Se a data de término for menor que a de início */
+            // Se a data de término for menor que a de início
             if($animeStartAdd > $animeEndAdd) {
                 $animeStartAdd = null;
                 $animeEndAdd = null;
             }
             
-            /* Pegar os gêneros */
+            // Pegar os gêneros
             if(!isset($_POST['genres'])) {
                 $animeGenresAdd = null;
             }
@@ -174,10 +174,10 @@
             }
         }
 
-        /* Pegar o ID do anime que foi inserido */
+        // Pegar o ID do anime que foi inserido
         $animeIDAdd = mysqli_insert_id($conn);
 
-        /* Verificar o número de personagens que existem no banco de dados */
+        // Verificar o número de personagens que existem no banco de dados
         $sqlCharacterVerify = "SELECT characterID FROM characters";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sqlCharacterVerify)) {
@@ -189,13 +189,13 @@
             $characterVerifyTotal = mysqli_num_rows($characterVerify);
         }
 
-        /* Pegar o ID de cada personagem e se ele é principal ou secundário */
+        // Pegar o ID de cada personagem e se ele é principal ou secundário
         $characterIDPost = $_POST['characterID'];
         $characterRolePost = $_POST['characterRole'];
         for($i = 0; $i <= 5; $i++) {
             $characterIDAdd = $characterIDPost[$i];
             $characterRoleAdd = $characterRolePost[$i];
-            /* Adicionar na tabela apenas se existir um personagem a ser adicionado no formulário e se o personagem existir no banco de dados */
+            // Adicionar na tabela apenas se existir um personagem a ser adicionado no formulário e se o personagem existir no banco de dados
             if($characterIDAdd > 0 && $characterIDAdd <= $characterVerifyTotal && !empty($characterRoleAdd)) {
                 $sqlCharactersAdd = "INSERT INTO anime_characters (animeID, characterID, characterRole) VALUES(?,?,?)";
                 $stmt = mysqli_stmt_init($conn);
@@ -208,22 +208,22 @@
                 }
             }
         } 
-        /* Atualizar o AUTO_INCREMENT da tabela, para evitar erros */
+        // Atualizar o AUTO_INCREMENT da tabela, para evitar erros
         $sqlTableUpdate = "SET @num = 0;";
         $sqlTableUpdate .= "UPDATE anime_characters SET ID = @num := (@num+1);";
         $sqlTableUpdate .= "ALTER TABLE anime_characters AUTO_INCREMENT =1;";
         mysqli_multi_query($conn, $sqlTableUpdate);
 
-        /* Voltar para a página de adição de anime */
+        // Voltar para a página de adição de anime
         header("Location: ../admin-add.php?config=add-anime");
     }
 
-    /* Adicionar manga */
+    // Adicionar manga
     if(isset($_POST['manga-add'])) {
         $mangaTitleAdd = $_POST['title'];
         $mangaSinopseAdd = $_POST['sinopse'];
 
-        /* Pegar o avatar e banner */
+        // Pegar o avatar e banner
         $mangaAvatarNameAdd = $_FILES['avatar']['name'];
         $mangaAvatarTmpNameAdd = $_FILES['avatar']['tmp_name'];
         $mangaAvatarSizeAdd = $_FILES['avatar']['size'];
@@ -253,7 +253,7 @@
         $mangaYearEndAdd = $_POST['yearEnd'];
         $mangaEndAdd = $mangaYearEndAdd.'-'.$mangaMonthEndAdd.'-'.$mangaDayEndAdd;
 
-        /* Não permitir o título e avatar nulo */
+        // Não permitir o título e avatar nulo
         if(empty($mangaTitleAdd) || empty($mangaAvatarNameAdd)) {
             header("Location: ../admin-add.php?config=add-manga");
             exit();
@@ -278,7 +278,7 @@
                 }
             }
 
-            /* Confirmações para enviar o avatar */
+            // Confirmações para enviar o avatar
             if(!empty($mangaAvatarNameAdd)) {
                 if(in_array($mangaAvatarActualExtAdd, $allowed)) {
                     if($mangaAvatarErrorAdd === 0) {
@@ -298,7 +298,7 @@
                 }
             }
             
-            /* Confirmações para enviar o banner */
+            // Confirmações para enviar o banner
             if(!empty($mangaBannerNameAdd)) {
                 if(in_array($mangaBannerActualExtAdd, $allowed)) {
                     if($mangaBannerErrorAdd === 0) {
@@ -318,7 +318,7 @@
                 }
             }
 
-            /* Se a sinopse/banner não possuir nenhuma informação */
+            // Se a sinopse/banner não possuir nenhuma informação
             if(empty($mangaSinopseAdd)) {
                 $mangaSinopseAdd = null;
             }
@@ -326,17 +326,17 @@
                 $mangaBannerAdd = null;
             }
 
-            /* Se os capítulos não forem números | for nulo | ou maior que 4 digitos || ou menor que 0*/
+            // Se os capítulos não forem números | for nulo | ou maior que 4 digitos || ou menor que 0
             if(!is_numeric($mangaChaptersAdd)|| empty($mangaChaptersAdd) || strlen($mangaChaptersAdd) > 4 || $mangaChaptersAdd < 0) {
                 $mangaChaptersAdd = null;
             }
 
-            /* Se os volumes não forem números | for nulo | ou maior que 4 digitos || ou menor que 0*/
+            // Se os volumes não forem números | for nulo | ou maior que 4 digitos || ou menor que 0
             if(!is_numeric($mangaVolumesAdd)|| empty($mangaVolumesAdd) || strlen($mangaVolumesAdd) > 4 || $mangaVolumesAdd < 0) {
                 $mangaVolumesAdd = null;
             }
 
-            /* Se o ano de início for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula */
+            // Se o ano de início for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula
             if($mangaYearStartAdd == '0000') {
                 $mangaStartAdd = null;
             }
@@ -347,7 +347,7 @@
                 $mangaStartAdd = null;
             }
 
-            /* Se o ano de término for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula */
+            // Se o ano de término for nulo | Se o dia não for nulo, mas o mês sim | Se a data for nula
             if($mangaYearEndAdd == '0000') {
                 $mangaEndAdd = null;
             }
@@ -358,13 +358,13 @@
                 $mangaEndAdd = null;
             }
 
-            /* Se a data de término for maior que a de início */
+            // Se a data de término for maior que a de início
             if($mangaStartAdd > $mangaEndAdd) {
                 $mangaStartAdd = null;
                 $mangaEndAdd = null;
             }
 
-            /* Pegar os gêneros */
+            // Pegar os gêneros
             if(!isset($_POST['genres'])) {
                 $mangaGenresAdd = null;
             }
@@ -392,10 +392,10 @@
             }
         }
 
-        /* Pegar o ID do manga que foi inserido */
+        // Pegar o ID do manga que foi inserido
         $mangaIDAdd = mysqli_insert_id($conn);
 
-        /* Verificar o número de personagens que existem no banco de dados */
+        // Verificar o número de personagens que existem no banco de dados
         $sqlCharacterVerify = "SELECT characterID FROM characters";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sqlCharacterVerify)) {
@@ -407,13 +407,13 @@
             $characterVerifyTotal = mysqli_num_rows($characterVerify);
         }
 
-        /* Pegar o ID de cada personagem e se ele é principal ou secundário */
+        // Pegar o ID de cada personagem e se ele é principal ou secundário
         $characterIDPost = $_POST['characterID'];
         $characterRolePost = $_POST['characterRole'];
         for($i = 0; $i <= 5; $i++) {
             $characterIDAdd = $characterIDPost[$i];
             $characterRoleAdd = $characterRolePost[$i];
-            /* Adicionar na tabela apenas se existir um personagem a ser adicionado no formulário e se o personagem existir no banco de dados */
+            // Adicionar na tabela apenas se existir um personagem a ser adicionado no formulário e se o personagem existir no banco de dados
             if($characterIDAdd > 0 && $characterIDAdd <= $characterVerifyTotal && !empty($characterRoleAdd)) {
                 $sqlCharactersAdd = "INSERT INTO manga_characters (mangaID, characterID, characterRole) VALUES(?,?,?)";
                 $stmt = mysqli_stmt_init($conn);
@@ -426,21 +426,21 @@
                 }
             }
         } 
-        /* Atualizar o AUTO_INCREMENT da tabela, para evitar erros */
+        // Atualizar o AUTO_INCREMENT da tabela, para evitar erros
         $sqlTableUpdate = "SET @num = 0;";
         $sqlTableUpdate .= "UPDATE manga_characters SET ID = @num := (@num+1);";
         $sqlTableUpdate .= "ALTER TABLE manga_characters AUTO_INCREMENT =1;";
         mysqli_multi_query($conn, $sqlTableUpdate);
 
-        /* Voltar para a página de adição de manga */
+        // Voltar para a página de adição de manga
         header("Location: ../admin-add.php?config=add-manga");
     }
 
-    /* Adicionar personagem */
+    // Adicionar personagem
     if(isset($_POST['character-add'])) {
         $characterNameAdd = $_POST['name'];
     
-        /* Pegar o avatar */
+        // Pegar o avatar
         $characterAvatarNameAdd = $_FILES['avatar']['name'];
         $characterAvatarTmpNameAdd = $_FILES['avatar']['tmp_name'];
         $characterAvatarSizeAdd = $_FILES['avatar']['size'];
@@ -451,7 +451,7 @@
                 
         $characterInfoAdd = $_POST['info'];
 
-        /* Se o nome/avatar for nulo */
+        // Se o nome/avatar for nulo
         if(empty($characterNameAdd) || empty($characterAvatarNameAdd)) {
             header("Location: ../admin-add.php?config=add-character");
         }
@@ -475,7 +475,7 @@
                 }
             }
 
-            /* Confirmações para enviar o avatar */
+            // Confirmações para enviar o avatar
             if(!empty($characterAvatarNameAdd)) {
                 if(in_array($characterAvatarActualExtAdd, $allowed)) {
                     if($characterAvatarErrorAdd === 0) {
@@ -495,7 +495,7 @@
                 }
             }
 
-            /* Se a informação for nula */
+            // Se a informação for nula
             if(empty($characterInfoAdd)) {
                 $characterInfoAdd = null;
             }

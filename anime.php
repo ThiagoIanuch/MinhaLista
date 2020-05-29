@@ -81,26 +81,26 @@
                                     <?php 
                                         setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
                                         date_default_timezone_set('America/Sao_Paulo');
-                                        /* ano */ $yearStart = substr($animeStart, -10, 4);
-                                        /* mes */ $monthStart = substr($animeStart, -5, 2);
-                                        /* dia */$dayStart = substr($animeStart, -2, 2);
+                                        $yearStart = substr($animeStart, -10, 4); // ano
+                                        $monthStart = substr($animeStart, -5, 2); // mes
+                                        $dayStart = substr($animeStart, -2, 2); // dia 
 
-                                        /* ano */ $yearEnd = substr($animeEnd, -10, 4);
-                                        /* mes */ $monthEnd = substr($animeEnd, -5, 2);
-                                        /* dia */$dayEnd = substr($animeEnd, -2, 2);
+                                        $yearEnd = substr($animeEnd, -10, 4); // ano
+                                        $monthEnd = substr($animeEnd, -5, 2); // mes
+                                        $dayEnd = substr($animeEnd, -2, 2); // dia
 
-                                        /* Data de início */
+                                        // Data de início
                                         if($animeStart != null) {
-                                            /* Se a data de início não for nulo */
+                                            // Se a data de início não for nulo
                                             if($yearStart > 0 && $monthStart > 0 && $dayStart > 0) {
                                                 echo strftime('%d de %b, %Y',strtotime($animeStart)).' até ';
                                             }
-                                            /* Se apenas o dia for nulo */
+                                            // Se apenas o dia for nulo
                                             else if($yearStart > 0 && $monthStart > 0 && $dayStart <= 0) {
                                                 $animeStart = $yearStart.'-'.$monthStart.'-'.'01';
                                                 echo ucfirst(strftime('%b, %Y',strtotime($animeStart))).' até ';
                                             }
-                                            /* Se o dia e o mês for nulo */
+                                            // Se o dia e o mês for nulo
                                             else if($yearStart > 0 && $monthStart <= 0 && $dayStart <= 0) {
                                                 $animeStart = $yearStart.'-'.'01'.'-'.'01';
                                                 echo strftime('%Y',strtotime($animeStart)).' até ';
@@ -117,16 +117,16 @@
                                         }
 
                                         if($animeEnd != null) {
-                                            /* Se a data de término não for nulo */
+                                            // Se a data de término não for nulo
                                             if($yearEnd > 0 && $monthEnd > 0 && $dayEnd > 0) {
                                                 echo strftime('%d de %b, %Y',strtotime($animeEnd));
                                             }
-                                            /* Se apenas o dia for nulo */
+                                            // Se apenas o dia for nulo
                                             else if($yearEnd > 0 && $monthEnd > 0 && $dayEnd <= 0) {
                                                 $animeEnd = $yearEnd.'-'.$monthEnd.'-'.'01';
                                                 echo ucfirst(strftime('%b, %Y',strtotime($animeEnd)));
                                             }
-                                            /* Se o dia e o mês for nulo */
+                                            // Se o dia e o mês for nulo
                                             else if($yearEnd > 0 && $monthEnd <= 0 && $dayEnd <= 0) {
                                                 $animeEnd = $yearEnd.'-'.'01'.'-'.'01';
                                                 echo strftime('%Y',strtotime($animeEnd));

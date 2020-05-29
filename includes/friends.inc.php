@@ -1,7 +1,7 @@
 <?php
     include "db.inc.php";
 
-    /* Pegar do usúario atual e do outro usúario */
+    // Pegar do usúario atual e do outro usúario
     if(isset($_SESSION['userID'])) {
         $userSession = $_SESSION['userID'];
     }
@@ -9,7 +9,7 @@
         $userID = $_GET['userid'];
     }
 
-    /* Checar se o úsuario já é amigo */
+    // Checar se o úsuario já é amigo
     if(isset($_GET['userid'])) {
         $sql = "SELECT userFriendIDOne, userFriendIDTWO FROM friends_users WHERE userFriendIDOne=? AND userFriendIDTwo=? OR userFriendIDOne=? AND userFriendIDTwo=?";
         $stmt = mysqli_stmt_init($conn);
@@ -24,7 +24,7 @@
         }
     }
 
-    /* Verificar se o usúario já enviou um pedido de amizade */
+    // Verificar se o usúario já enviou um pedido de amizade
     if(isset($_GET['userid'])) {
         $sql = "SELECT userFriendSent, userFriendReceived FROM friends_requests WHERE userFriendSent=? AND userFriendReceived=? OR userFriendSent=? AND userFriendReceived=?";
         $stmt = mysqli_stmt_init($conn);
@@ -39,7 +39,7 @@
         }
     }
 
-    /* Enviar pedido de amizade */
+    // Enviar pedido de amizade
     if(isset($_POST['friend-request'])) {
         session_start();
         include "session-update.inc.php";
@@ -73,7 +73,7 @@
         }
     }
 
-    /* Remover dos amigos */
+    // Remover dos amigos
     if(isset($_POST['friend-remove'])) {
         session_start();
         include "session-update.inc.php";
@@ -96,7 +96,7 @@
         }
     }
     
-    /* Notificações com pedido de amizade */
+    // Notificações com pedido de amizade
     $sql = "SELECT u.userID, u.userName, u.userAvatar FROM users u JOIN friends_requests fr ON fr.userFriendSent=u.userID WHERE fr.userFriendReceived=?";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
@@ -119,7 +119,7 @@
         }
     }
 
-    /* Aceitar/Recusar pedido de amizade  */
+    // Aceitar/Recusar pedido de amizade
     if(isset($_POST['friend-accept'])) {
         session_start();
         include "session-update.inc.php";
@@ -170,7 +170,7 @@
         }
     }
 
-    /* Lista de amigos adicionados */
+    // Lista de amigos adicionados
     if(isset($_GET['userid'])) {
         $sql = "SELECT uf.userFriendIDOne, uf.userFriendIDTwo FROM friends_users uf JOIN users u ON uf.userFriendIDOne=u.userID WHERE uf.userFriendIDOne=? OR uf.userFriendIDTwo=? ORDER BY RAND() LIMIT 10";
         $stmt = mysqli_stmt_init($conn);
@@ -193,7 +193,7 @@
         }
     }
 
-    /* Total de amigos adicionados */
+    // Total de amigos adicionados
     if(isset($_GET['userid'])) {
         $sql = "SELECT uf.userFriendIDOne, uf.userFriendIDTwo FROM friends_users uf JOIN users u ON uf.userFriendIDOne=u.userID WHERE uf.userFriendIDOne=? OR uf.userFriendIDTwo=?";
         $stmt = mysqli_stmt_init($conn);
@@ -208,7 +208,7 @@
         }
     }
     
-    /* Avatar dos amigos adicionados */
+    // Avatar dos amigos adicionados
     if(isset($_GET['userid']) && $resultCheckFriend > 0) {
         $sql = "SELECT userName, userAvatar FROM users WHERE userID=?";
         $stmt = mysqli_stmt_init($conn);
