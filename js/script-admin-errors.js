@@ -319,6 +319,7 @@ $(document).ready(function() {
         var user_day = $("#userDay").val();
         var user_month = $("#userMonth").val();
         var user_year = $("#userYear").val();
+        var birthday = user_day + user_month + user_year;
 
         // Valores aceitos
         var username_accept = /^[A-Za-z-0-9]+$/;
@@ -400,9 +401,14 @@ $(document).ready(function() {
         }
 
         // Confirmar a data de aniversário
-        if(user_day == "00" || user_month == "00" || user_year == "0000" ) {
-            $(".error-messages:nth-of-type(8)").html("* Insira uma data de aniversário válida");
-            submit = false;
+        if(birthday > 0) {
+            if(user_day == "00" || user_month == "00" || user_year == "0000" ) {
+                $(".error-messages:nth-of-type(8)").html("* Insira uma data de aniversário válida");
+                submit = false;
+            }
+            else {
+                $(".error-messages:nth-of-type(8)").html("");
+            }
         }
         else {
             $(".error-messages:nth-of-type(8)").html("");
