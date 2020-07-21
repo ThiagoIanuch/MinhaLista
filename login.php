@@ -7,10 +7,10 @@
         if(isset($_GET['error'])) {
             $error = $_GET['error'];
             if($error == "nouser") {
-                $errorMessage = "* Nome de usúario/email ou senha incorretos";
+                $errorMessage = "* Nome de usuário/email ou senha incorretos";
             }
             else if($error == "userbanned") {
-                $errorMessage = "* Este usúario foi banido por infringir as regras do site. Caso considere isto um erro, entre em contato com o <a href='support.php' class='support-error'>Suporte</a>.";
+                $errorMessage = "* Este usuário foi banido por infringir as regras do site. Caso considere isto um erro, entre em contato com o <a href='support.php' class='support-error'>Suporte</a>.";
             }
         }
     }
@@ -24,7 +24,7 @@
         <link rel="stylesheet" type="text/css" href="css/signup-login.css">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
-        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css.css">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
     </head>
     <body>
         <?php
@@ -40,7 +40,7 @@
     
                     <div class="form-container">
                         <form action="includes/login.inc.php" method="post" id="login">
-                            <input type="text" placeholder="Nome de usúario ou email" name="userNameEmail" class="form-input" id="username">
+                            <input type="text" placeholder="Nome de usuário ou email" name="userNameEmail" class="form-input" id="username">
                             <p class="form-error"></p>
 
                             <input type="password" placeholder="Senha" name="password" class="form-input" id="password">

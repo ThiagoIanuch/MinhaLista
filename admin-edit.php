@@ -69,7 +69,7 @@
         <link rel="stylesheet" type="text/css" href="css/admin.css">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
-        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css.css">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
     </head>
     <body>
         <?php
@@ -590,7 +590,7 @@
                         </form>';
                     }
 
-                    // Usúarios
+                    // Usuários
                     if($_GET['config'] == 'edit' && isset($_GET['userid'])) {
                         $yearBirthday = substr($userBirthday, -10, 4);
                         $monthBirthday = substr($userBirthday, -5, 2);
@@ -615,18 +615,18 @@
                             <h4>ID *</h4>    
                             <input type="text" value="'.$userID.'" name="ID" class="form-input" disabled>
 
-                            <h4>Usúario *</h4>
-                            <input type="text" value="'.$userName.'" placeholder="Nome do usúario" name="name" class="form-input" id="userName">
+                            <h4>Usuário *</h4>
+                            <input type="text" value="'.$userName.'" placeholder="Nome do usuário" name="name" class="form-input" id="userName">
                             <p class="error-messages"></p>
                             
                             <h4>Email *</h4>
-                            <input type="text" value="'.$userEmail.'" placeholder="Email do usúario" name="email" class="form-input" id="userEmail">
+                            <input type="text" value="'.$userEmail.'" placeholder="Email do usuário" name="email" class="form-input" id="userEmail">
                             <p class="error-messages"></p>
 
                             <h4>Senha *</h4>
                             <input type="text" value="'.$userPassword.'" class="form-input" disabled>
 
-                            <input type="text" placeholder="Alterar senha do usúario" name="password" class="form-input" id="userPassword">
+                            <input type="text" placeholder="Alterar senha do usuário" name="password" class="form-input" id="userPassword">
                             <p class="error-messages"></p>
                             
                             <h4>Permissões *</h4>   
@@ -644,7 +644,7 @@
                                 </div>
                                 <div class="avatar" id="avatar-show" style="background-image:url(media/users/avatar/'.$userAvatar.')"></div>
                                 <div class="form-checkbox">
-                                    <input type="checkbox" name="avatarCheck" id="avatarCheck"> <label for="avatarCheck">Excluir avatar do usúario</label>
+                                    <input type="checkbox" name="avatarCheck" id="avatarCheck"> <label for="avatarCheck">Excluir avatar do usuário</label>
                                 </div>
                             </div>
                             <p class="error-messages e-avatar"></p>
@@ -658,7 +658,7 @@
                                 </div>
                                 <div class="banner" id="banner-show" style="background-image:url(media/users/banner/'.$userBanner.')"></div>
                                 <div class="form-checkbox">
-                                    <input type="checkbox" name="bannerCheck" id="bannerCheck"> <label for="bannerCheck">Excluir banner do usúario</label>
+                                    <input type="checkbox" name="bannerCheck" id="bannerCheck"> <label for="bannerCheck">Excluir banner do usuário</label>
                                 </div>
                             </div>
                             <p class="error-messages e-banner"></p>
@@ -672,13 +672,13 @@
                                 </div>
                                 <div class="banner" id="bannerList-show" style="background-image:url(media/users/bannerList/'.$userBannerList.')"></div>
                                 <div class="form-checkbox">
-                                    <input type="checkbox" name="bannerListCheck" id="bannerListCheck"> <label for="bannerListCheck">Excluir banner da lista do usúario</label>
+                                    <input type="checkbox" name="bannerListCheck" id="bannerListCheck"> <label for="bannerListCheck">Excluir banner da lista do usuário</label>
                                 </div>
                             </div>
                             <p class="error-messages e-bannerList"></p>
 
                             <h4>Sobre</h4>
-                            <textarea name="about" placeholder="Sobre o usúario" class="form-input textarea" id="userAbout">'.$userAbout.'</textarea>
+                            <textarea name="about" placeholder="Sobre o usuário" class="form-input textarea" id="userAbout">'.$userAbout.'</textarea>
                             <p class="error-messages"></p>
 
                             <h4>Gênero</h4>   
@@ -736,7 +736,7 @@
                             <p class="error-messages date"></p>
                             
                             <h4 class="margin">Localização</h4>
-                            <input type="text" value="'.$userLocalization.'" placeholder="Localização do usúario" name="localization" class="form-input" id="userLocalization">
+                            <input type="text" value="'.$userLocalization.'" placeholder="Localização do usuário" name="localization" class="form-input" id="userLocalization">
                             <p class="error-messages"></p>
             
                             <h4>Data de cadastro(dd/mm/yyyy)</h4>   

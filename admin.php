@@ -31,7 +31,7 @@
                 echo $view == "anime" ? 'Anime | ' : '';
                 echo $view == "manga" ? 'Manga | ' : '';
                 echo $view == "characters" ? 'Personagens | ' : '';
-                echo $view == "users" ? 'Usúarios | ' : '';
+                echo $view == "users" ? 'Usuários | ' : '';
             ?>
             Painel de Controle - MinhaLista
         </title>
@@ -40,7 +40,7 @@
         <link rel="stylesheet" type="text/css" href="css/admin.css">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
-        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css.css">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
     </head>
     <body>
         <?php
@@ -60,7 +60,7 @@
                     <a href="admin.php?view=anime&page=1" class="btn-view">Anime</a>
                     <a href="admin.php?view=manga&page=1" class="btn-view">Manga</a>
                     <a href="admin.php?view=characters&page=1" class="btn-view">Personagens</a>
-                    <a href="admin.php?view=users&page=1" class="btn-view">Usúarios</a>
+                    <a href="admin.php?view=users&page=1" class="btn-view">Usuários</a>
                 </div>
                 <!--  -->
 
@@ -255,7 +255,7 @@
                             <span></span>
                             <span></span>
                         </div>
-                    </div>'; // Usúarios
+                    </div>'; // Usuários
                     }
                 ?>
                 </div> <!-- Container -->

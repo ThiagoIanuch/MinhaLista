@@ -9,7 +9,7 @@
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="img/icon1.png">
         <link rel="stylesheet" type="text/css" href="css/list.css">
-        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css.css">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
     </head>
     <body>
         <div class="page-wrap">
@@ -172,7 +172,7 @@
                 MinhaLista é uma propriedade de MinhaLista. ©2020 Todos os direitos reservados.
             </div>
         </div>
-        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/script-list.js"></script>  
     </body>
 </html>

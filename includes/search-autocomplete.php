@@ -17,7 +17,7 @@
             $result = mysqli_stmt_get_result($stmt);
             $resultCheckUsers = mysqli_num_rows($result);
             if($resultCheckUsers < 0) {
-                echo 'Nenhum usúario encontrado';
+                echo 'Nenhum usuário encontrado';
             } 
             else {
                 $userID = array();
@@ -47,7 +47,7 @@
             $result = mysqli_stmt_get_result($stmt);
             $resultCheckUsers = mysqli_num_rows($result);
             if($resultCheckUsers < 0) {
-                echo 'Nenhum usúario encontrado';
+                echo 'Nenhum usuário encontrado';
             } 
             else {
                 $userID = array();
@@ -77,7 +77,7 @@
             $result = mysqli_stmt_get_result($stmt);
             $resultCheckUsers = mysqli_num_rows($result);
             if($resultCheckUsers < 0) {
-                echo 'Nenhum usúario encontrado';
+                echo 'Nenhum usuário encontrado';
             } 
             else {
                 $userID = array();
@@ -95,7 +95,7 @@
             }   
         }
 
-        // Pesquisar por usúarios
+        // Pesquisar por usuários
         $sql = "SELECT userID, userName, userAvatar FROM users WHERE userName LIKE ? ORDER BY userName LIMIT 2";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {
@@ -107,7 +107,7 @@
             $result = mysqli_stmt_get_result($stmt);
             $resultCheckUsers = mysqli_num_rows($result);
             if($resultCheckUsers < 0) {
-                echo 'Nenhum usúario encontrado';
+                echo 'Nenhum usuário encontrado';
             } 
             else {
                 $userID = array();

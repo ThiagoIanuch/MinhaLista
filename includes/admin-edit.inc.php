@@ -621,7 +621,7 @@
         }
     }
 
-    // Exibir dados do usúario
+    // Exibir dados do usuário
     if(isset($_GET['config']) && isset($_GET['userid'])) {
         if($_GET['config'] == 'edit') {
             $userID = $_GET['userid'];
@@ -656,7 +656,7 @@
         }
     }    
 
-    // Alterar dados do usúario
+    // Alterar dados do usuário
     if(isset($_POST['user-edit']) || isset($_POST['user-ban']) || isset($_POST['user-desban'])) {
         $userIDEdit = $_GET['userid'];
         $userNameEdit = $_POST['name'];
@@ -745,7 +745,7 @@
             }
         }
 
-        // Se o sobre do usúario for nulo
+        // Se o sobre do usuário for nulo
         if(empty($userAboutEdit)) {
             $userAboutEdit = null;
         }
@@ -843,7 +843,7 @@
                 mysqli_stmt_execute($stmt);
             }
 
-            // Voltar para a página de edição de usúario
+            // Voltar para a página de edição de usuário
             header("Location: ../admin-edit.php?config=edit&userid=".$userIDEdit);
         }
     }

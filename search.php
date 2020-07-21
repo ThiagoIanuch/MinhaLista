@@ -18,7 +18,7 @@
         <link rel="stylesheet" type="text/css" href="css/menu.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
         <link rel="stylesheet" type="text/css" href="css/search.css">
-        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css.css">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
     </head>
 
     <body>
@@ -116,9 +116,9 @@
                     ?>
                 </div>
 
-                <!-- Usúarios -->
+                <!-- Usuários -->
                 <div class="results">
-                    <h3>Usúarios</h3>
+                    <h3>Usuários</h3>
                     <?php                
                         if($resultCheckUsers > 0) {
                             setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
@@ -155,7 +155,7 @@
                             }
                         }
                         else {
-                            echo '<h4>Nenhum usúario encontrado com esse nome.</h4>';
+                            echo '<h4>Nenhum usuário encontrado com esse nome.</h4>';
                         }
                     ?>
                 </div> <!-- Results -->

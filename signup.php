@@ -7,7 +7,7 @@
         if(isset($_GET['error'])) {
             $error = $_GET['error'];
             if($error == "useremailtaken") {
-                $errorUserEmail = "* Este nome de usúario ou email já existe";
+                $errorUserEmail = "* Este nome de usuário ou email já existe";
             }
         }
     }           
@@ -21,7 +21,7 @@
         <link rel="stylesheet" type="text/css" href="css/signup-login.css">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
-        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css.css">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
     </head>
     <body>
         <?php
@@ -38,7 +38,7 @@
                     
                     <div class="form-container">
                         <form action="includes/signup.inc.php" method="post" id="signup">
-                            <input type="text" placeholder="Nome de usúario" name="username" class="form-input" id="username">
+                            <input type="text" placeholder="Nome de usuário" name="username" class="form-input" id="username">
                             <p class="form-error">
                                 <?php
                                     if(isset($errorUserEmail)) {

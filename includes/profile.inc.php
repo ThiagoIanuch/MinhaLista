@@ -4,7 +4,7 @@
         $userID = $_GET['userid'];
     }
 
-    // Informações do usúario
+    // Informações do usuário
     if(isset($userID)) {
         $sql = "SELECT userName, userPermissions, userAvatar, userBanner, userAbout, userGender, userBirthday, userLocalization, userDate, userOnlineStatus, userBanStatus FROM users WHERE userID=?";
         $stmt = mysqli_stmt_init($conn);
@@ -55,7 +55,7 @@
         }
     }
 
-    // Se o usúario estiver banido, mover para página de banido
+    // Se o usuário estiver banido, mover para página de banido
     if($userBanStatus == 1) {
         header("HTTP/1.1 404 Not Found");
         include "profile-banned.php";

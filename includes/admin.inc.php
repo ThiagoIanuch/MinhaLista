@@ -95,7 +95,7 @@
         $total_pages = ceil($total_rows / $characters_per_page);
     }
 
-    // Usúarios
+    // Usuários
     if(isset($page) && $page > 0 && $_GET['view'] == 'users') {
         $users_per_page = 15;
         $users_per_page_start = ($page-1) * $users_per_page; 

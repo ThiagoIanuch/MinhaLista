@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="css/error-pages.css">
         <link rel="stylesheet" type="text/css" href="css/menu.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
-        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css.css">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
     </head>
     <body>
         <?php 
@@ -24,7 +24,7 @@
             <div class="container">    
                 <img class="error-image banned" src="img/banned.png">
                 <div class="error"><a href="index.php">ERRO</a></div>
-                <div class="message">Este usúario foi banido.</div>
+                <div class="message">Este usuário foi banido.</div>
             </div>
         </div>
 
