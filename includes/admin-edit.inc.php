@@ -8,7 +8,7 @@
         $allowed = array('jpg', 'jpeg', 'png');
     }
 
-    // Exibir personagens ao editar anime/manga
+    // Exibir personagens ao editar anime/mangá
     if(isset($_GET['config']) && isset($_GET['animeid']) || isset($_GET['mangaid'])) {
         if(isset($_GET['animeid'])) {
             $showRequest = $_GET['animeid'];
@@ -288,7 +288,7 @@
         header("Location: ../admin-edit.php?config=edit&animeid=".$animeIDEdit);
     }
 
-    // Exibir dados do manga
+    // Exibir dados do mangá
     if(isset($_GET['config']) && isset($_GET['mangaid'])) {
         if($_GET['config'] == 'edit') {
             $mangaID = $_GET['mangaid'];
@@ -320,9 +320,9 @@
         }
     }
 
-    // Alterar dados do manga
+    // Alterar dados do mangá
     if(isset($_POST['manga-edit'])) {
-        // ID do manga a ser alterado
+        // ID do mangá a ser alterado
         $mangaIDEdit = $_GET['mangaid'];
 
         // Outras configurações */
@@ -531,7 +531,7 @@
         $sqlTableUpdate .= "ALTER TABLE manga_characters AUTO_INCREMENT =1;";
         mysqli_multi_query($conn, $sqlTableUpdate);
 
-        // Voltar para a página de edição do manga
+        // Voltar para a página de edição do mangá
         header("Location: ../admin-edit.php?config=edit&mangaid=".$mangaIDEdit);
     }
     

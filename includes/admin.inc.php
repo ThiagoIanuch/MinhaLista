@@ -28,14 +28,13 @@
                 }
             }
         }
-        // Atualizar depois
         $total_pages_sql = "SELECT COUNT(animeID) FROM anime";
         $result = mysqli_query($conn,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $anime_per_page);
     }
 
-    // Manga
+    // Mangá
     if(isset($page) && $page > 0 && $_GET['view'] == 'manga') {
         $manga_per_page = 15;
         $manga_per_page_start = ($page-1) * $manga_per_page; 
@@ -59,7 +58,6 @@
                 }
             }
         }
-        // Atualizar depois
         $total_pages_sql = "SELECT COUNT(mangaID) FROM manga";
         $result = mysqli_query($conn,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
@@ -88,7 +86,6 @@
                 }
             }
         }
-        // Atualizar depois
         $total_pages_sql = "SELECT COUNT(characterID) FROM characters";
         $result = mysqli_query($conn,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
@@ -117,7 +114,6 @@
                 }
             }
         }
-        // Atualizar depois
         $total_pages_sql = "SELECT COUNT(userID) FROM users";
         $result = mysqli_query($conn,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];

@@ -34,7 +34,7 @@
                                         echo 'Lista de Anime';
                                     }
                                     else {
-                                        echo 'Lista de Manga';
+                                        echo 'Lista de Mangá';
                                     }
                                 ?>
                                 </span>
@@ -49,7 +49,7 @@
                             <div class="list-display-none" id="display">
                                 <?php 
                                 if($list == 'animelist.php') {
-                                    echo '<a href="mangalist.php?userid='.$userID.'&status=5">Lista Manga</a>';
+                                    echo '<a href="mangalist.php?userid='.$userID.'&status=5">Lista Mangá</a>';
                                 }
                                 else {
                                     echo '<a href="animelist.php?userid='.$userID.'&status=5">Lista Anime</a>';
@@ -75,7 +75,7 @@
                     </div>
     
                     <div class="status-menu">
-                        <a href="animelist.php?userid=<?php echo $userID ?>&status=5" class="status-button">TODOS OS ANIMES</a>
+                        <a href="animelist.php?userid=<?php echo $userID ?>&status=5" class="status-button">TODOS OS ANIME</a>
                         <a href="animelist.php?userid=<?php echo $userID ?>&status=1" class="status-button">ATUALMENTE ASSISTINDO</a>
                         <a href="animelist.php?userid=<?php echo $userID ?>&status=2" class="status-button">COMPLETADO</a>
                         <a href="animelist.php?userid=<?php echo $userID ?>&status=3" class="status-button">DESISTIU</a>
@@ -99,7 +99,7 @@
                                     $status = 'PLANEJA ASSISTIR';
                                 break;
                                 case '5':
-                                    $status = 'TODOS OS ANIMES';
+                                    $status = 'TODOS OS ANIME';
                                 break;
                             }
                             echo $status; 

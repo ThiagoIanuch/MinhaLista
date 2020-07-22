@@ -63,7 +63,7 @@
                 
                 <!-- Mangá -->
                 <div class="results">
-                    <h3>Manga</h3>
+                    <h3>Mangá</h3>
                     <?php                
                         if($resultCheckManga > 0) {
                             for($i = 0; $i < count($mangaID), $i < count($mangaTitle), $i < count($mangaAvatar), $i < count($mangaType), $i < count($mangaVolumes), $i < count($mangaStatus), $i < count($mangaGenres); $i++) {
@@ -88,7 +88,7 @@
                             }
                         }
                         else {
-                            echo '<h4>Nenhum manga encontrado com esse nome.</h4>';
+                            echo '<h4>Nenhum mangá encontrado com esse nome.</h4>';
                         }
                     ?>
                 </div>

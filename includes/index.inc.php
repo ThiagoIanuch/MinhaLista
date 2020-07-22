@@ -24,7 +24,7 @@
         }
     }
 
-    // Selecionar manga
+    // Selecionar mangá
     $sql = "SELECT mangaID, mangaTitle, mangaAvatar FROM manga WHERE mangaGenres NOT LIKE ? OR mangaGenres IS NULL ORDER BY RAND() LIMIT 5";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {

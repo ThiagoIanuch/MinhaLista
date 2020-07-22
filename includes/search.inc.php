@@ -50,7 +50,7 @@
             }
         }
 
-        // Pesquisar por manga
+        // Pesquisar por mangá
         $sql = "SELECT mangaID, mangaTitle, mangaAvatar, mangaType, mangaVolumes, mangaStatus, mangaGenres FROM manga WHERE mangaTitle LIKE ? ORDER BY mangaTitle LIMIT 10";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)) {

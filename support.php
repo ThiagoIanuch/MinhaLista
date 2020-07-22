@@ -31,13 +31,13 @@
                     <li>Não me lembro da minha senha registrada.</li>
                     <li>Qualquer outro problema de acesso.</li>
 
-                    <h3>Problemas com o perfil ou com a lista de anime / manga</h3>
+                    <h3>Problemas com o perfil ou com a lista de anime / mangá</h3>
                     <li>Erros de upload de imagem.</li>
                     <li>Problemas de exibição.</li>
                     <li>Erros de estatística.</li>
                     <li>Relatório de abuso (usuários, imagens, comentários etc...)</li>
 
-                    <h3>Problemas no banco de dados (anime, manga ou personagem)</h3>
+                    <h3>Problemas no banco de dados (anime, mangá ou personagem)</h3>
                     <li>Para fazer solicitações de alterações no banco de dados, adições ou relatar outros problemas.</li>
 
                     <h3>Sugestões para recursos / alterações</h3>

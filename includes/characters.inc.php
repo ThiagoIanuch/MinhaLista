@@ -31,7 +31,7 @@
         }
     }
 
-    // Exibir personagens na página de manga
+    // Exibir personagens na página de mangá
     if(isset($_GET['mangaid'])) {
         $sql = "SELECT c.characterID, c.characterName, c.characterAvatar, mc.characterRole FROM characters c JOIN manga_characters mc ON c.characterID = mc.characterID WHERE mangaid=? ORDER BY mc.characterRole LIMIT 6";
         $stmt = mysqli_stmt_init($conn);

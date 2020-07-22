@@ -9,7 +9,7 @@
         <ul>
             <li><a href="index.php">Início</a></li>
             <li><a href="anime-ranking.php?page=1">Anime</a></li>
-            <li><a href="manga-ranking.php?page=1">Manga</a></li>
+            <li><a href="manga-ranking.php?page=1">Mangá</a></li>
             <li class="default">Ajuda
                 <ul>
                     <li><a href="about.php">Sobre</a></li>
@@ -22,7 +22,7 @@
     <!-- Barra de pesquisa -->
     <div class="menu-search" id="search">
         <form class="menu-search-bar" action="includes/search.inc.php" method="post" id="search-form">
-            <input type="text" name="search" class="menu-search-txt" id="search-autocomplete" placeholder="Procurar por anime, manga e mais..." autocomplete="off">
+            <input type="text" name="search" class="menu-search-txt" id="search-autocomplete" placeholder="Procurar por anime, mangá e mais..." autocomplete="off">
             <input type="submit" name="search-submit" class="menu-search-button" value="OK">
         </form>
     </div>
@@ -204,7 +204,7 @@
                         echo '
                         <a href="profile.php?userid='.$_SESSION['userID'].'"><li>Meu perfil</li></a>
                         <a href="anime-ranking.php?page=1"><li>Anime Ranking</li></a>
-                        <a href="manga-ranking.php?page=1"><li>Manga Ranking</li></a>
+                        <a href="manga-ranking.php?page=1"><li>Mangá Ranking</li></a>
                         <a href="about.php"><li>Sobre</li></a>
                         <a href="support.php"><li>Suporte</li></a>
                         <a href="settings.php?edit=profile"><li>Configurações</li></a>';
@@ -223,7 +223,7 @@
                         <a href="login.php"><li>Entrar</li></a>
                         <a href="signup.php"><li>Registrar</li></a>
                         <a href="anime-ranking.php?page=1"><li>Anime Ranking</li></a>
-                        <a href="manga-ranking.php?page=1"><li>Manga Ranking</li></a>
+                        <a href="manga-ranking.php?page=1"><li>Mangá Ranking</li></a>
                         <a href="about.php"><li>Sobre</li></a>
                         <a href="support.php"><li>Suporte</li></a>';
                     }

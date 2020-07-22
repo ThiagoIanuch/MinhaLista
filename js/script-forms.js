@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // ID do anime/manga pela URL
+    // ID do anime/mangá pela URL
     var animeID = location.href.substring(location.href.lastIndexOf('=') +1);
     var mangaID = location.href.substring(location.href.lastIndexOf('=') +1);
 
@@ -48,8 +48,8 @@ $(document).ready(function() {
         });     
     });
 
-    // Manga
-    // Form de status 
+    // Mangá
+    // Form de status
     $('#mangaStatus').change(function(event) {
         event.preventDefault();
         $.ajax({

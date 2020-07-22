@@ -31,7 +31,7 @@
                 echo "Anime";
             }
             else if($config == "add-manga") {
-                echo "Manga";
+                echo "Mangá";
             }
             else if($config == "add-character") {
                 echo "Personagem";
@@ -173,12 +173,11 @@
                             <h4>Fonte</h4>   
                             <select name="source" class="form-select">
                                 <option value="">Selecionar</option>
-                                <option value="Manga">Manga</option>
+                                <option value="Mangá">Mangá</option>
                                 <option value="Novel">Novel</option>
                                 <option value="Original">Original</option>
                             </select>';
                         
-            
                             echo '
                             <h4>Gêneros</h4>
                             <select multiple size="9" name="genres[]" class="form-select multiple">';
@@ -212,19 +211,19 @@
                         </form>';
                     }
 
-                    // Manga
+                    // Mangá
                     if($_GET['config'] == 'add-manga') {
                         // Opções para selecionar os gêneros
                         $mangaGenresOptions = array("Ação", "Aventura", "Carros", "Comédia", "Dementia", "Dêmonios", "Doujinshi", "Drama", "Ecchi", "Fantasia", "Jogo", "Gênero Bender", "Harém", "Hentai", "Historical", "Horror", "Josei", "Crianças", "Magia", "Artes Marciais", "Mecha", "Militar", "Música", "Mistério", "Paródia", "Policial", "Psicológico", "Romance", "Samurai", "Escolar", "Ficção Científica", "Seinen", "Shoujo", "Shoujo Ai", "Shounen", "Shounen Ai", "Fátia de Vida", "Espaço", "Esportes", "Super Poder", "Sobrenatural", "Thriller", "Vampiro", "Yaoi", "Yuri");
 
                         echo '
                         <form action="includes/admin-add.inc.php?config=add-manga" method="post" enctype="multipart/form-data" id="manga-add">             
-                            <h4>Manga *</h4>
-                            <input type="text" placeholder="Título do manga" name="title" class="form-input" id="manga-title">
+                            <h4>Mangá *</h4>
+                            <input type="text" placeholder="Título do mangá" name="title" class="form-input" id="manga-title">
                             <p class="error-messages"></p>
 
                             <h4>Sinopse</h4>
-                            <textarea name="sinopse" placeholder="Sinopse do manga" class="form-input textarea"></textarea>
+                            <textarea name="sinopse" placeholder="Sinopse do mangá" class="form-input textarea"></textarea>
 
                             <h4>Avatar *</h4>   
                             <div class="form-image">
@@ -250,7 +249,7 @@
 
                             <h4>Tipo *</h4>   
                             <select name="type" class="form-select">
-                                <option value="Manga">Manga</option>
+                                <option value="Mangá">Mangá</option>
                                 <option value="Novel">Novel</option>
                             </select>
 

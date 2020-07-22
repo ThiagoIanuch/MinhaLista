@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title><?php echo $userName.' | Lista Manga - MinhaLista'?></title>
+        <title><?php echo $userName.' | Lista Mangá - MinhaLista'?></title>
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="img/icon1.png">
         <link rel="stylesheet" type="text/css" href="css/list.css">
@@ -34,7 +34,7 @@
                                         echo 'Lista de Anime';
                                     }
                                     else {
-                                        echo 'Lista de Manga';
+                                        echo 'Lista de Mangá';
                                     }
                                 ?>
                                 </span>
@@ -75,7 +75,7 @@
                     </div>
     
                     <div class="status-menu">
-                        <a href="mangalist.php?userid=<?php echo $userID ?>&status=5" class="status-button">TODOS OS MANGAS</a>
+                        <a href="mangalist.php?userid=<?php echo $userID ?>&status=5" class="status-button">TODOS OS MANGÁ</a>
                         <a href="mangalist.php?userid=<?php echo $userID ?>&status=1" class="status-button">ATUALMENTE LENDO</a>
                         <a href="mangalist.php?userid=<?php echo $userID ?>&status=2" class="status-button">COMPLETADO</a>
                         <a href="mangalist.php?userid=<?php echo $userID ?>&status=3" class="status-button">DESISTIU</a>
@@ -99,7 +99,7 @@
                                     $status = 'PLANEJA LER';
                                 break;
                                 case '5':
-                                    $status = 'TODOS OS MANGAS';
+                                    $status = 'TODOS OS MANGÁ';
                                 break;
                             }
                             echo $status; 
@@ -111,7 +111,7 @@
                             <td class="data-header status"></td>
                             <td class="data-header rank">#</td>
                             <td class="data-header image">Avatar</td>
-                            <td class="data-header title">Manga</td>
+                            <td class="data-header title">Mangá</td>
                             <td class="data-header score">Pontuação</td>
                             <td class="data-header type">Tipo</td>
                             <td class="data-header progress">Capítulos</td>

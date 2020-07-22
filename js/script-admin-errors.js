@@ -127,7 +127,7 @@ $(document).ready(function() {
         return submit;
     });
 
-    // Erros ao adicionar e editar manga
+    // Erros ao adicionar e editar mangá
     $("#manga-add, #manga-edit").submit(function() {
         // Pegar valores
         var manga_title = $("#manga-title").val();

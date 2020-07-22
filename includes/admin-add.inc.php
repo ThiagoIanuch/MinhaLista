@@ -218,7 +218,7 @@
         header("Location: ../admin-add.php?config=add-anime");
     }
 
-    // Adicionar manga
+    // Adicionar mangá
     if(isset($_POST['manga-add'])) {
         $mangaTitleAdd = $_POST['title'];
         $mangaSinopseAdd = $_POST['sinopse'];
@@ -392,7 +392,7 @@
             }
         }
 
-        // Pegar o ID do manga que foi inserido
+        // Pegar o ID do mangá que foi inserido
         $mangaIDAdd = mysqli_insert_id($conn);
 
         // Verificar o número de personagens que existem no banco de dados

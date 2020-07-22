@@ -26,10 +26,10 @@
 
                     <h2>CRIE SUA PRÓPRIA LISTA</h2>
 
-                    <p>MinhaLista é um projeto de TCC com o objetivo de criar uma rede social com uma base de dados sobre Animes e Mangas e seus respectivos personagens, com diversas informações sobre eles e também o que foi melhor avaliado pelos usúarios e o que é mais popular.</p>
-                    <p>Ao criar uma conta, você possui um perfil próprio, onde pode adicionar amigos, animes e mangas favoritos, além de possuir também uma lista própria para colocar tudo o que já assistiu ou leu.</p>
+                    <p>MinhaLista é um projeto de TCC com o objetivo de criar uma rede social com uma base de dados sobre anime e mangá e seus respectivos personagens, com diversas informações sobre eles e também o que foi melhor avaliado pelos usuários e o que é mais popular.</p>
+                    <p>Ao criar uma conta, você possui um perfil próprio, onde pode adicionar amigos, anime e mangá favoritos, além de possuir também uma lista própria para colocar tudo o que já assistiu ou leu.</p>
 
-                    <h3>DESCUBRA NOVOS ANIMES E MANGAS AGORA! </h3>
+                    <h3>DESCUBRA NOVOS ANIME E MANGÁ AGORA! </h3>
 
                     <a href="signup.php" class="button">REGISTRE-SE AGORA</a>
                 </div> <!-- Container -->

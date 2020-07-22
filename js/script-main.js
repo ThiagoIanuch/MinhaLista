@@ -4,14 +4,14 @@ $(document).ready(function() {
     $(function(){
         var text = 1;
         var string;
-        $('#text-changing').html('SUA LISTA DE ANIMES E MANGA');
+        $('#text-changing').html('SUA LISTA DE ANIME E MANGÁ');
         setInterval(function(){
 
             switch(text) {
                 case 1: string = "CRIE SEU PERFIL"; break;
                 case 2: string = "ADICIONE SEUS FAVORITOS"; break;
-                case 3: string = "DESCUBRA NOVOS ANIMES E MANGAS"; break;
-                case 4: string = "SUA LISTA DE ANIMES E MANGA"; break;
+                case 3: string = "DESCUBRA NOVOS ANIME E MANGÁ"; break;
+                case 4: string = "SUA LISTA DE ANIME E MANGÁ"; break;
             }
             $('#text-changing').html(string);
             

@@ -51,10 +51,10 @@
             </div>
 
             <div class="shows">
-                <div class="text-header">DESCUBRA NOVOS ANIMES E MANGAS!</div>
+                <div class="text-header">DESCUBRA NOVOS ANIME E MANGÁ!</div>
                     <div class="grid">
                         <?php 
-                        // Mostrar anime/manga
+                        // Mostrar anime/mangá
                         for($i = 0; $i < count ($animeID), $i < count($animeTitle), $i < count($animeAvatar); $i++) {
                             echo '
                             <div class="shows-not-responsive">

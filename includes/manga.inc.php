@@ -39,7 +39,7 @@
         }
     }
 
-    // Usúario já adicionou na lista ou não / status em que o manga se encontra pro usúario
+    // Usúario já adicionou na lista ou não / status em que o mangá se encontra pro usúario
     if (isset($_SESSION['userID'])) {
         $userID = $_SESSION['userID'];
         $sql = "SELECT userID, userStatus, userScore, userChapters, userVolumes FROM manga_users WHERE mangaID=? AND userID=?";   
@@ -135,7 +135,7 @@
         }
     }
     
-    // Pontuação e número de membros do manga
+    // Pontuação e número de membros do mangá
     $sql = "SELECT userScore, AVG(userScore), userID, count(*) mangaUsers, userID FROM manga_users WHERE mangaID=?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {

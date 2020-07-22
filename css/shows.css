@@ -155,7 +155,7 @@ h3 {
     line-height: 20px;
     font-size: 15px;
     border-radius: 3px;
-    content: 'Usúarios';
+    content: 'Usuários';
     display: block;
 }
 
@@ -325,7 +325,7 @@ form, .status-score{
     }
 }
 
-/* Colocar 2 forms em baixo e 2 em cima na opção de adicionar pontuação/status/capítulos/volumes quando a tela for menor que 601px na lista de manga */
+/* Colocar 2 forms em baixo e 2 em cima na opção de adicionar pontuação/status/capítulos/volumes quando a tela for menor que 601px na lista de mangá */
 @media (max-width: 601px) {
     .status-score {
         width: 100%;

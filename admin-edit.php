@@ -105,7 +105,7 @@
                         $statusNotAired = $animeStatus == "Ainda não foi exibido" ? "selected" : "";
 
                         // Verificar qual a fonte selecionada
-                        $sourceManga = $animeSource == "Manga" ? "selected" : "";
+                        $sourceManga = $animeSource == "Mangá" ? "selected" : "";
                         $sourceNovel = $animeSource == "Novel" ? "selected" : "";
                         $sourceOriginal = $animeSource == "Original" ? "selected" : "";
 
@@ -266,7 +266,7 @@
                             <h4>Fonte</h4>   
                             <select name="source" class="form-select">
                                 <option value="">Selecionar</option>
-                                <option value="Manga" '.$sourceManga.'>Manga</option>
+                                <option value="Mangá" '.$sourceManga.'>Mangá</option>
                                 <option value="Novel" '.$sourceNovel.'>Novel</option>
                                 <option value="Original" '.$sourceOriginal.'>Original</option>
                             </select>';
@@ -328,20 +328,20 @@
                         </form>';
                     }
 
-                    // Manga
+                    // Mangá
                     if($_GET['config'] == 'edit' && isset($_GET['mangaid'])) {
-                        // Verificar o ano que o manga começou
+                        // Verificar o ano que o mangá começou
                         $yearStart = substr($mangaStart, -10, 4);
                         $monthStart = substr($mangaStart, -5, 2);
                         $dayStart = substr($mangaStart, -2, 2);
 
-                        // Verificar o ano que o manga terminou
+                        // Verificar o ano que o mangá terminou
                         $yearEnd = substr($mangaEnd, -10, 4);
                         $monthEnd = substr($mangaEnd, -5, 2);
                         $dayEnd = substr($mangaEnd, -2, 2);
 
                         // Verificar qual o tipo selecionado
-                        $typeManga = $mangaType == "Manga" ? "selected" : "";
+                        $typeManga = $mangaType == "Mangá" ? "selected" : "";
                         $typeNovel = $mangaType == "Novel" ? "selected" : "";
 
                         // Verificar qual o status selecionado
@@ -358,12 +358,12 @@
                             <h4>ID *</h4>    
                             <input type="text" value="'.$mangaID.'" name="ID" class="form-input" disabled>
 
-                            <h4>Manga *</h4>
+                            <h4>Mangá *</h4>
                             <input type="text" value="'.$mangaTitle.'" placeholder="Título do manga" name="title" class="form-input" id="manga-title">
                             <p class="error-messages"></p>
 
                             <h4>Sinopse</h4>
-                            <textarea name="sinopse" placeholder="Sinopse do manga" class="form-input textarea">'.$mangaSinopse.'</textarea>
+                            <textarea name="sinopse" placeholder="Sinopse do mangá" class="form-input textarea">'.$mangaSinopse.'</textarea>
 
                             <h4>Avatar *</h4>   
                             <div class="form-image">
@@ -385,14 +385,14 @@
                                 </div>
                                 <div class="banner" id="banner-show" style="background-image:url(media/manga/banner/'.$mangaBanner.')"></div>
                                 <div class="form-checkbox">
-                                    <input type="checkbox" name="bannerCheck" id="bannerCheck"> <label for="bannerCheck">Excluir banner do manga</label>
+                                    <input type="checkbox" name="bannerCheck" id="bannerCheck"> <label for="bannerCheck">Excluir banner do mangá</label>
                                 </div>
                             </div>
                             <p class="error-messages e-banner"></p>
 
                             <h4>Tipo *</h4>   
                             <select name="type" class="form-select">
-                                <option value="Manga" '.$typeManga.'>Manga</option>
+                                <option value="Mangá" '.$typeManga.'>Mangá</option>
                                 <option value="Novel" '.$typeNovel.'>Novel</option>
                             </select>
 

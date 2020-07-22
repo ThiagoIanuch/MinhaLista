@@ -29,7 +29,7 @@
         <title>
             <?php
                 echo $view == "anime" ? 'Anime | ' : '';
-                echo $view == "manga" ? 'Manga | ' : '';
+                echo $view == "manga" ? 'Mangá | ' : '';
                 echo $view == "characters" ? 'Personagens | ' : '';
                 echo $view == "users" ? 'Usuários | ' : '';
             ?>
@@ -58,7 +58,7 @@
                 <!-- Menu view -->
                 <div class="view-menu">
                     <a href="admin.php?view=anime&page=1" class="btn-view">Anime</a>
-                    <a href="admin.php?view=manga&page=1" class="btn-view">Manga</a>
+                    <a href="admin.php?view=manga&page=1" class="btn-view">Mangá</a>
                     <a href="admin.php?view=characters&page=1" class="btn-view">Personagens</a>
                     <a href="admin.php?view=users&page=1" class="btn-view">Usuários</a>
                 </div>
@@ -154,7 +154,7 @@
                     ?>
 
                 <?php
-                    // Manga
+                    // Mangá
                     if($view == 'manga') {
                     echo '
                     <div class="manga-container">
@@ -185,7 +185,7 @@
                                 <a href="admin-add.php?config=add-manga" target="_blank" class="clear">Adicionar</a>
                             </span>
                         </div>
-                    </div>'; // Manga
+                    </div>'; // Mangá
                     }
                 ?>
 

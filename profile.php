@@ -152,7 +152,7 @@
                         </ul>
                         <div class="buttons-list">
                             <a href="animelist.php?userid=<?php echo $userID?>&status=5">Lista Anime</a>
-                            <a href="mangalist.php?userid=<?php echo $userID?>&status=5">Lista Manga</a>
+                            <a href="mangalist.php?userid=<?php echo $userID?>&status=5">Lista Mangá</a>
                         </div>
                     </div>
                 </div> <!-- Container left -->
@@ -310,9 +310,9 @@
                                 </div> <!-- Status-status-total -->
                             </div> <!-- Stats anime -->
 
-                            <!-- Estatísticas manga -->
+                            <!-- Estatísticas mangá -->
                             <div class="stats-manga">
-                                <h4>Manga</h4>
+                                <h4>Mangá</h4>
                                 <div class="stats-graph">  
                                     <?php 
                                     if(empty($mangaReading)) {
@@ -469,8 +469,8 @@
                             ?>
                         </div>
                         <div class="manga-favorites">
-                            <!-- Manga -->
-                            <h4>Manga</h4> 
+                            <!-- Mangá -->
+                            <h4>Mangá</h4> 
                             <?php
                                 if(isset($mangaFavorites)) {
                                     echo ' <div class="favorites-grid">';

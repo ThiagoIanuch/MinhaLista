@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Manga Ranking - MinhaLista</title>
+        <title>Mangá Ranking - MinhaLista</title>
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="img/icon1.png">
         <link rel="stylesheet" type="text/css" href="css/ranking.css">
@@ -176,7 +176,7 @@
                                     <div class="manga-title"><a href="manga.php?mangaid='.$mangaID[$i].'">'.$mangaTitle[$i].'</a></div>
                                     <div>'.$mangaType[$i].' ('.$mangaVolumes[$i].' vols)</div>
                                     <div>'.$mangaAired[$i].'</div>
-                                    <div>'.$mangaUsers[$i].' usúarios</div>
+                                    <div>'.$mangaUsers[$i].' usuários</div>
                                 </div>
                             </div>
                                     

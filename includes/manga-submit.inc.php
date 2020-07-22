@@ -6,7 +6,7 @@
     $mangaID = $_GET['mangaid'];
     $userID = $_SESSION['userID'];
 
-    // Adicionar manga na lista
+    // Adicionar mangá na lista
     if(isset($_POST['add-submit'])) {
         if(isset($_SESSION['userID'])) {
             $sql = "SELECT mangaID, userID FROM manga_users WHERE mangaID=? AND userID=?";
@@ -44,7 +44,7 @@
         header("Location: ../manga.php?mangaid=".$mangaID);
     }
 
-    // Remover manga da lista
+    // Remover mangá da lista
     if(isset($_POST['delete'])) {
         $sql = "DELETE FROM manga_users WHERE mangaID=? AND userID=?";
         $smt = mysqli_stmt_init($conn);
@@ -65,7 +65,7 @@
         header("Location: ../manga.php?mangaid=".$mangaID);
     }
 
-    // Adicionar manga aos favoritos
+    // Adicionar mangá aos favoritos
     if(isset($_POST['favorite-submit'])) { 
         $sql = "SELECT mangaID, userID FROM manga_favorites WHERE mangaID=? AND userID=?";
         $stmt = mysqli_stmt_init($conn);
@@ -113,7 +113,7 @@
         header("Location: ..manga.php?mangaid=".$mangaID);
     }
 
-    // Remover manga dos favoritos
+    // Remover mangá dos favoritos
     if(isset($_POST['favorite-delete'])) {
         $sql = "DELETE FROM manga_favorites WHERE mangaID=? AND userID=?";
         $smt = mysqli_stmt_init($conn);
@@ -134,7 +134,7 @@
         header("Location: ../manga.php?mangaid=".$mangaID);
     }
 
-    // Status do usúario no manga
+    // Status do usúario no mangá
     if(isset($_POST['status-submit'])) {
         $userStatus = $_POST['status-submit'];
         if($userStatus == '2' && $mangaChapters != NULL && $mangaVolumes != NULL) {
@@ -164,7 +164,7 @@
         header("Location: ../manga.php?mangaid=".$mangaID);
     }
 
-    // Pontuação do usúario no manga
+    // Pontuação do usúario no mangá
     if(isset($_POST['score-submit'])) {
         $userScore = $_POST['score-submit'];
         if($userScore == "0") {
@@ -185,7 +185,7 @@
         header("Location: ../manga.php?mangaid=".$mangaID);
     }
 
-    // Capítulos do usúario no manga
+    // Capítulos do usúario no mangá
     if(isset($_POST['chapters'])) {
         $userChapters = $_POST['chapters'];
         if($mangaChapters == null) {
@@ -219,7 +219,7 @@
         header("Location: ../manga.php?mangaid=".$mangaID);
     }
 
-    // Volumes do usúario no manga
+    // Volumes do usúario no mangá
     if(isset($_POST['volumes'])) {
         $userVolumes = $_POST['volumes'];
         if($mangaVolumes == null) {

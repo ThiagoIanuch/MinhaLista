@@ -106,7 +106,7 @@ body {
 	text-decoration: none;
 }
 
-/* Página de sugestão de anime e manga */
+/* Página de sugestão de anime e mangá */
 .shows {
 	height: 500px;
 	background-color: rgba(12, 13, 37, 1);
@@ -170,7 +170,7 @@ body {
 		margin-top: -10px;
 	}
 
-	/* Animes/Manga que mostram */
+	/* Anime/Mangá que mostram */
 	.shows-not-responsive {
 		display: none;
 	}

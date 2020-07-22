@@ -178,7 +178,7 @@
                                     <div class="anime-title"><a href="anime.php?animeid='.$animeID[$i].'">'.$animeTitle[$i].'</a></div>
                                     <div>'.$animeType[$i].' ('.$animeEpisodes[$i].' eps)</div>
                                     <div>'.$animeAired[$i].'</div>
-                                    <div>'.$animeUsers[$i].' usúarios</div>
+                                    <div>'.$animeUsers[$i].' usuários</div>
                                 </div>
                             </div>
                                     
