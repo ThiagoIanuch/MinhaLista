@@ -1,12 +1,13 @@
 <h1>MinhaLista</h1> 
 
-Projeto de conclusão do curso técnico em informática do Colégio Estadual Pedro Macedo.
+Projeto de conclusão do Curso Técnico em Informática do Colégio Estadual Pedro Macedo.
 
 Site para criar sua lista de anime e manga.
 - Perfis
 - Listas
 - Ranking
 - Favoritos
+- Busca
 - Baseado no MyAnimelist e Anilist
 
 <h3>Tecnologias utilizadas</h3>
