@@ -5,11 +5,9 @@ Projeto de conclusão do curso técnico em informática do Colégio Estadual Ped
 Site para criar sua lista de anime e manga.
 - Perfis
 - Listas
-- Notas
+- Ranking
 - Favoritos
-- Baseado no MyAnimelist e AniList
-
-<img src="https://i.imgur.com/9j8mKvL.png">
+- Baseado no MyAnimelist e Anilist
 
 <h3>Tecnologias utilizadas</h3>
 <table>
