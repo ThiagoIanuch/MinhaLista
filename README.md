@@ -2,7 +2,13 @@
 
 Projeto de conclusão do curso técnico em informática do Colégio Estadual Pedro Macedo.
 
-Site para criar sua lista de anime e manga, podendo dar notas, adicionar favoritos e muito mais. Baseado nos famosos sites MyAnimeList e AniList.
+Site para criar sua lista de anime e manga.
+- Perfis
+- Listas
+- Notas
+- Favoritos
+- Baseado no MyAnimelist e AniList
+
 
 <img src="https://i.imgur.com/9j8mKvL.png">
 
