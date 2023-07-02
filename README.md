@@ -18,6 +18,7 @@ Site para criar sua lista de anime e manga.
     <td>JavaScript, JQuery e AJAX</td>
     <td>MySQL</td>
     <td>Visual Studio Code</td>
+    <td>WampServer</td>
   </tr>
 </table>
 
