@@ -4,13 +4,18 @@ Projeto de conclusão do curso técnico em informática do Colégio Estadual Ped
 
 Site para criar sua lista de anime e manga, podendo dar notas, adicionar favoritos e muito mais. Baseado nos famosos sites MyAnimeList e AniList.
 
-- HTML
-- CSS
-- JavaScript, JQuery e AJAX
-- MySQL
-- Visual Studio Code
-
 <img src="https://i.imgur.com/9j8mKvL.png">
+
+<h3>Tecnologias utilizadas</h3>
+<table>
+  <tr>
+    <td>HTML</td>
+    <td>CSS</td>
+    <td>JavaScript, JQuery e AJAX</td>
+    <td>MySQL</td>
+    <td>Visual Studio Code</td>
+  </tr>
+</table>
 
 <h3>Resultado final</h3>
 
