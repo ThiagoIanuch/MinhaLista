@@ -9,7 +9,6 @@ Site para criar sua lista de anime e manga.
 - Favoritos
 - Baseado no MyAnimelist e AniList
 
-
 <img src="https://i.imgur.com/9j8mKvL.png">
 
 <h3>Tecnologias utilizadas</h3>
