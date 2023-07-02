@@ -2,7 +2,7 @@
 
 Projeto de conclusão do Curso Técnico em Informática do Colégio Estadual Pedro Macedo.
 
-Site para criar sua lista de anime e manga.
+MinhaLista é um site para criar sua lista de anime e manga.
 - Perfis
 - Listas
 - Ranking
@@ -18,7 +18,7 @@ Site para criar sua lista de anime e manga.
     <td>JavaScript, jQuery e AJAX</td>
     <td>PHP</td>
     <td>MySQL</td>
-    <td>Visual Studio Code</td>
+    <td>Visual Studio Code 2019</td>
     <td>WampServer</td>
   </tr>
   <tr>
@@ -27,7 +27,7 @@ Site para criar sua lista de anime e manga.
     <td>3.4.1</td>
     <td>8.0</td>
     <td>8.0</td>
-    <td>2019</td>
+    <td>16.0</td>
     <td>3.1</td>
   </tr>
 </table>
