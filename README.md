@@ -15,10 +15,20 @@ Site para criar sua lista de anime e manga.
   <tr>
     <td>HTML</td>
     <td>CSS</td>
-    <td>JavaScript, JQuery e AJAX</td>
+    <td>JavaScript, jQuery e AJAX</td>
+    <td>PHP</td>
     <td>MySQL</td>
     <td>Visual Studio Code</td>
     <td>WampServer</td>
+  </tr>
+  <tr>
+    <td>HTML5</td>
+    <td>CSS3</td>
+    <td>3.4.1</td>
+    <td>8.0</td>
+    <td>8.0</td>
+    <td>2019</td>
+    <td>3.1</td>
   </tr>
 </table>
 
