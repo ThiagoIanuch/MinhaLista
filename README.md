@@ -37,4 +37,4 @@ https://github.com/ThiagoIanuch/MinhaLista/assets/63036139/6dc53eb9-946d-44de-90
 <h3>Utilização</h3>
 
 - Possuir o WampServer ou o XAMPP
-- Será necessário baixar o projeto e importar o código sql para criar a base de dados
+- Será necessário baixar o projeto e importar o código SQL para criar a base de dados
