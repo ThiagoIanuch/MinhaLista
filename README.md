@@ -35,5 +35,6 @@ MinhaLista é site para criar sua lista de anime e manga. É um projeto realizad
 https://github.com/ThiagoIanuch/MinhaLista/assets/63036139/6dc53eb9-946d-44de-9058-ed5c1d8f45fc
 
 <h3>Utilização</h3>
+
 - Possuir o WampServer ou o XAMPP
 - Será necessário baixar o projeto e importar o código sql para criar a base de dados
