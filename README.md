@@ -1,6 +1,8 @@
 <h1>MinhaLista</h1> 
 
-MinhaLista é site para criar sua lista de anime e manga. É um projeto realizado para a conclusão do Curso Técnico em Informática do Colégio Estadual Pedro Macedo.
+Projeto realizado para a conclusão do Curso Técnico em Informática do Colégio Estadual Pedro Macedo.
+
+MinhaLista é um site para criar sua lista de anime e manga.
 - Perfis
 - Listas
 - Ranking
