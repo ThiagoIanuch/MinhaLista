@@ -3,12 +3,12 @@
 Projeto realizado para a conclusão do Curso Técnico em Informática do Colégio Estadual Pedro Macedo.
 
 MinhaLista é um site para criar sua lista de anime e manga.
-- Perfis
-- Listas
-- Ranking
-- Favoritos
-- Busca
-- Baseado no MyAnimelist e Anilist
+- Perfis;
+- Listas;
+- Ranking;
+- Favoritos;
+- Busca;
+- Baseado no MyAnimelist e Anilist.
 
 <h3>Tecnologias</h3>
 <table>
@@ -38,5 +38,7 @@ https://github.com/ThiagoIanuch/MinhaLista/assets/63036139/6dc53eb9-946d-44de-90
 
 <h3>Utilização</h3>
 
-- Possuir o WampServer ou o XAMPP
-- Será necessário baixar o projeto e importar o código SQL para criar a base de dados
+- Baixar o projeto;
+- Possuir o WampServer ou o XAMPP;
+- Importar o código SQL para criar a base de dados;
+- Acessar o site.
